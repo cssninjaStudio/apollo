@@ -1,0 +1,278 @@
+<div
+  x-data="sidebar()"
+  class="
+    fixed
+    top-0
+    left-0
+    h-full
+    bg-muted-100
+    dark:bg-muted-1000
+    transition-all
+    duration-300
+    z-50
+  "
+  :class="[
+    $store.app.isLayoutCompact ? 'w-[80px]' : 'w-[250px]',
+    $store.app.isMobileOpen ? 'translate-x-0 lg:translate-x-0' : '-translate-x-full lg:translate-x-0'
+  ]"
+>
+  <!--Header-->
+  <div class="w-full h-20 flex items-center justify-between px-6">
+    <a href="/home.html" class="flex items-center gap-2">
+      <img
+        src="/img/logo/logo-square-outline.svg"
+        class="w-8 h-8 dark:invert"
+        alt="App logo"
+        width="48"
+        height="48"
+      />
+      <img
+        src="/img/logo/text.svg"
+        class="w-24 dark:invert"
+        :class="$store.app.isLayoutCompact ? 'hidden' : 'block'"
+        alt="App logo"
+        width=""
+        height=""
+      />
+    </a>
+
+    <!--Fold button-->
+    <button
+      type="button"
+      class="
+        hidden
+        items-center
+        justify-center
+        w-10
+        h-10
+        mask mask-blob
+        hover:bg-muted-200
+        dark:hover:bg-muted-800
+        text-muted-700
+        dark:text-muted-400
+        transition-colors
+        duration-300
+        cursor-pointer
+      "
+      :class="$store.app.isLayoutCompact ? 'hidden' : 'lg:flex'"
+      @click="foldSidebar()"
+    >
+      <i class="iconify w-5 h-5" data-icon="ph:dots-nine-duotone"></i>
+    </button>
+
+    <!--Mobile button-->
+    <button
+      class="
+        flex
+        lg:hidden
+        items-center
+        justify-center
+        w-10
+        h-10
+        mask mask-blob
+        hover:bg-muted-200
+        dark:hover:bg-muted-800
+        text-muted-700
+        dark:text-muted-400
+        transition-colors
+        duration-300
+        cursor-pointer
+      "
+      @click="$store.app.isMobileOpen = false"
+    >
+      <i class="iconify w-5 h-5" data-icon="lucide:arrow-left"></i>
+    </button>
+  </div>
+  <!--Body-->
+  <div
+    class="
+      relative
+      h-[calc(100%_-_10rem)]
+      w-full
+      overflow-y-auto
+      slimscroll
+      py-6
+    "
+    :class="$store.app.isLayoutCompact ? 'px-4' : 'px-6'"
+  >
+    <!--Menu-->
+    <ul class="space-y-3">
+      <!--Menu item-->
+      <li>
+        <a
+          class="
+            flex
+            items-center
+            gap-4
+            py-3
+            rounded-lg
+            bg-primary-200
+            dark:bg-primary-600/20
+            text-primary-600
+            dark:text-primary-500
+          "
+          :class="$store.app.isLayoutCompact ? 'px-1 justify-center' : 'px-4'"
+        >
+          <i class="iconify w-6 h-6" data-icon="ph:gauge-duotone"></i>
+          <span
+            class="font-sans text-sm"
+            :class="$store.app.isLayoutCompact ? 'hidden' : 'block'"
+          >
+            Dashboard
+          </span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/"
+          class="
+            flex
+            items-center
+            gap-4
+            py-3
+            rounded-lg
+            text-muted-500
+            hover:bg-muted-200
+            dark:hover:bg-muted-900
+            hover:text-muted-600
+            dark:hover:text-muted-200
+            transition-colors
+            duration-300
+          "
+          :class="$store.app.isLayoutCompact ? 'px-1 justify-center' : 'px-4'"
+        >
+          <i
+            class="iconify w-6 h-6"
+            data-icon="ph:arrows-left-right-duotone"
+          ></i>
+          <span
+            class="font-sans text-sm"
+            :class="$store.app.isLayoutCompact ? 'hidden' : 'block'"
+          >
+            Transactions
+          </span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/"
+          class="
+            flex
+            items-center
+            gap-4
+            py-3
+            rounded-lg
+            text-muted-500
+            hover:bg-muted-200
+            dark:hover:bg-muted-900
+            hover:text-muted-600
+            dark:hover:text-muted-200
+            transition-colors
+            duration-300
+          "
+          :class="$store.app.isLayoutCompact ? 'px-1 justify-center' : 'px-4'"
+        >
+          <i class="iconify w-6 h-6" data-icon="ph:check-duotone"></i>
+          <span
+            class="font-sans text-sm"
+            :class="$store.app.isLayoutCompact ? 'hidden' : 'block'"
+          >
+            Payments
+          </span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/"
+          class="
+            flex
+            items-center
+            gap-4
+            py-3
+            rounded-lg
+            text-muted-500
+            hover:bg-muted-200
+            dark:hover:bg-muted-900
+            hover:text-muted-600
+            dark:hover:text-muted-200
+            transition-colors
+            duration-300
+          "
+          :class="$store.app.isLayoutCompact ? 'px-1 justify-center' : 'px-4'"
+        >
+          <i class="iconify w-6 h-6" data-icon="ph:credit-card-duotone"></i>
+          <span
+            class="font-sans text-sm"
+            :class="$store.app.isLayoutCompact ? 'hidden' : 'block'"
+          >
+            Cards
+          </span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/"
+          class="
+            flex
+            items-center
+            gap-4
+            py-3
+            rounded-lg
+            text-muted-500
+            hover:bg-muted-200
+            dark:hover:bg-muted-900
+            hover:text-muted-600
+            dark:hover:text-muted-200
+            transition-colors
+            duration-300
+          "
+          :class="$store.app.isLayoutCompact ? 'px-1 justify-center' : 'px-4'"
+        >
+          <i class="iconify w-6 h-6" data-icon="ph:infinity-duotone"></i>
+          <span
+            class="font-sans text-sm"
+            :class="$store.app.isLayoutCompact ? 'hidden' : 'block'"
+          >
+            Credit
+          </span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/"
+          class="
+            flex
+            items-center
+            gap-4
+            py-3
+            rounded-lg
+            text-muted-500
+            hover:bg-muted-200
+            dark:hover:bg-muted-900
+            hover:text-muted-600
+            dark:hover:text-muted-200
+            transition-colors
+            duration-300
+          "
+          :class="$store.app.isLayoutCompact ? 'px-1 justify-center' : 'px-4'"
+        >
+          <i class="iconify w-6 h-6" data-icon="ph:gear-six-duotone"></i>
+          <span
+            class="font-sans text-sm"
+            :class="$store.app.isLayoutCompact ? 'hidden' : 'block'"
+          >
+            Accounts
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!--Footer-->
+  <div
+    class="w-full h-20 flex items-center justify-between"
+    :class="$store.app.isLayoutCompact ? 'px-2' : 'px-6'"
+  >
+    <!--Account menu-->
+    {{> navigation/sidebar/sidebar-dropdown-account}}
+  </div>
+</div>

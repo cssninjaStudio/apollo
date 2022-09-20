@@ -13,6 +13,7 @@ import persist from '@alpinejs/persist'
 
 import './demo'
 import './components'
+import './pages'
 
 window.Alpine = Alpine
 //Init intersect plugin
@@ -27,6 +28,10 @@ Alpine.store('app', {
     this.on = window.matchMedia('(prefers-color-scheme: dark)').matches
   },
   isDark: Alpine.$persist(false),
+  // isDark: false,
+  isLayoutCompact: false,
+  isPanelOpen: false,
+  isMobileOpen: false,
 })
 //Start Alpine
 Alpine.start()

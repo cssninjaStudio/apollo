@@ -1,0 +1,169 @@
+<div class="w-full flex items-center justify-between gap-6 py-4">
+  <div class="flex items-center gap-4 grow max-w-md">
+    <!--Expand sidebar button-->
+    <button
+      class="
+        items-center
+        justify-center
+        w-10
+        h-10
+        mask mask-blob
+        hover:bg-muted-200
+        dark:hover:bg-muted-800
+        text-muted-700
+        dark:text-muted-400
+        transition-colors
+        duration-300
+        cursor-pointer
+      "
+      :class="$store.app.isLayoutCompact ? 'lg:flex' : 'hidden'"
+      @click="$store.app.isLayoutCompact = false"
+    >
+      <i class="iconify w-5 h-5" data-icon="ph:dots-nine-duotone"></i>
+    </button>
+
+    <!--Mobile menu-->
+    <button
+      class="
+        flex
+        lg:hidden
+        items-center
+        justify-center
+        w-10
+        h-10
+        mask mask-blob
+        hover:bg-muted-200
+        dark:hover:bg-muted-900
+        text-muted-700
+        dark:text-muted-400
+        transition-colors
+        duration-300
+        cursor-pointer
+      "
+      @click="$store.app.isMobileOpen = true"
+    >
+      <i class="iconify w-5 h-5" data-icon="ph:dots-nine-duotone"></i>
+    </button>
+    <!--Search-->
+    <div
+      x-data="search()"
+      class="group hidden md:block relative w-full rounded-md shadow-sm"
+    >
+      <input
+        id="navbar-search-field"
+        x-model="searchTerms"
+        x-on:keyup="searchData()"
+        class="
+          w-full
+          h-10
+          bg-muted-100
+          dark:bg-muted-1000
+          rounded-lg
+          border border-transparent
+          focus:border-muted-200
+          dark:border-muted-800 dark:focus:border-muted-700
+          focus:bg-white
+          dark:focus:bg-muted-900
+          focus:shadow-xl focus:shadow-muted-400/10
+          dark:focus:shadow-muted-800/10
+          placeholder:text-muted-300
+          dark:placeholder:text-muted-700
+          text-base text-muted-600
+          dark:text-muted-200
+          pl-10
+          pr-4
+          py-2
+          transition-all
+          duration-300
+          tw-accessibility
+        "
+        placeholder="Search for anything..."
+        type="text"
+      />
+      <button
+        type="button"
+        class="
+          absolute
+          top-0
+          left-0
+          h-10
+          w-10
+          flex
+          justify-center
+          items-center
+          text-muted-400
+          dark:text-muted-600
+          group-focus-within:text-primary-500
+          transition-colors
+          duration-300
+          cursor-pointer
+        "
+      >
+        <i class="iconify w-4 h-4" data-icon="lucide:search"></i>
+      </button>
+      <!--Empty button-->
+      <button
+        class="
+          absolute
+          top-0
+          right-0
+          h-10
+          w-10
+          flex
+          justify-center
+          items-center
+          text-muted-400
+          hover:text-muted-700
+          dark:hover:text-muted-100
+          transition-colors
+          duration-300
+          cursor-pointer
+        "
+        :class="searchTerms === '' ? 'hidden' : 'block'"
+        @click="closeSearch()"
+      >
+        <i class="iconify w-4 h-4" data-icon="lucide:x"></i>
+      </button>
+
+      <!--Results-->
+      {{> navigation/navbar/navbar-search-results}}
+    </div>
+  </div>
+
+  <div class="flex items-center gap-x-4">
+    <!--Theme toggler-->
+    {{> theme/theme-toggler}}
+
+    <!--Money dropdown-->
+    {{> navigation/navbar/navbar-dropdown-money}}
+
+    <!--Panel button-->
+    <button
+      class="
+        h-10
+        w-10
+        inline-flex
+        justify-center
+        items-center
+        font-sans
+        text-sm text-muted-300
+        dark:text-muted-700
+        hover:text-yellow-400
+        dark:hover:text-yellow-400
+        bg-white
+        dark:bg-muted-1000
+        rounded-full
+        shadow-lg shadow-muted-400/20
+        dark:shadow-muted-800/30
+        hover:shadow-xl
+        tw-accessibility
+        transition-all
+        duration-300
+        tw-accessibility
+      "
+      @click="$store.app.isPanelOpen = true"
+    >
+      <i class="iconify w-5 h-5" data-icon="fluent:flash-28-filled"></i>
+    </button>
+  </div>
+</div>

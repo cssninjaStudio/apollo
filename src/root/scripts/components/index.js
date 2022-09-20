@@ -1,17 +1,21 @@
 import { layout } from './layout'
 import { navbar } from './navbar'
+import { sidebar } from './sidebar'
 import { search } from './search'
 import { backtotop } from './backtotop'
 import { boxCarousel } from './carousel'
 import { video } from './video'
 import { collapse } from './collapse'
+import { dropdown } from './dropdown'
 import { gallery } from './gallery'
 
 window.layout = layout
 window.navbar = navbar
+window.sidebar = sidebar
 window.search = search
 window.backtotop = backtotop
 window.boxCarousel = boxCarousel
 window.video = video
 window.collapse = collapse
 window.gallery = gallery
+window.dropdown = dropdown

@@ -1,0 +1,171 @@
+<div x-data="dropdown()" class="relative" @click.away="close()">
+  <button
+    class="
+      h-10
+      inline-flex
+      justify-center
+      items-center
+      gap-x-2
+      px-6
+      py-2
+      font-sans
+      text-sm text-white
+      bg-primary-500
+      rounded-full
+      shadow-lg shadow-primary-500/20
+      hover:shadow-xl
+      tw-accessibility
+      transition-all
+      duration-300
+    "
+    @click="open()"
+  >
+    <span>Move Money</span>
+    <i
+      class="iconify w-4 h-4 transition-transform duration-300"
+      :class="isOpen ? 'rotate-180' : ''"
+      data-icon="lucide:chevron-down"
+    ></i>
+  </button>
+
+  <!--Dropdown menu-->
+  <div
+    x-cloak
+    x-show="isOpen"
+    x-transition
+    class="
+      absolute
+      top-11
+      right-0
+      w-[240px]
+      overflow-y-auto
+      slimscroll
+      p-2
+      rounded-lg
+      bg-white
+      dark:bg-muted-900
+      border border-muted-200
+      dark:border-muted-800
+      shadow-2xl shadow-muted-400/20
+      dark:shadow-muted-800/10
+      z-20
+    "
+  >
+    <ul class="space-y-1">
+      <li>
+        <a
+          href="/"
+          class="
+            flex
+            items-center
+            gap-3
+            p-2
+            rounded-lg
+            text-muted-400
+            hover:text-primary-500 hover:bg-muted-100
+            dark:hover:bg-muted-800
+            transition-colors
+            duration-300
+          "
+        >
+          <i class="iconify w-6 h-6" data-icon="ph:credit-card-duotone"></i>
+          <div class="font-sans">
+            <h5
+              class="text-sm font-semibold text-muted-800 dark:text-muted-200"
+            >
+              Payment
+            </h5>
+            <p class="text-xs text-muted-400">Send someone money</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/"
+          class="
+            flex
+            items-center
+            gap-3
+            p-2
+            rounded-lg
+            text-muted-400
+            hover:text-primary-500 hover:bg-muted-100
+            dark:hover:bg-muted-800
+            transition-colors
+            duration-300
+          "
+        >
+          <i
+            class="iconify w-6 h-6"
+            data-icon="ph:circles-three-plus-duotone"
+          ></i>
+          <div class="font-sans">
+            <h5
+              class="text-sm font-semibold text-muted-800 dark:text-muted-200"
+            >
+              Funding
+            </h5>
+            <p class="text-xs text-muted-400">Add or receive funds</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/"
+          class="
+            flex
+            items-center
+            gap-3
+            p-2
+            rounded-lg
+            text-muted-400
+            hover:text-primary-500 hover:bg-muted-100
+            dark:hover:bg-muted-800
+            transition-colors
+            duration-300
+          "
+        >
+          <i class="iconify w-6 h-6" data-icon="ph:arrow-right-duotone"></i>
+          <div class="font-sans">
+            <h5
+              class="text-sm font-semibold text-muted-800 dark:text-muted-200"
+            >
+              Receive
+            </h5>
+            <p class="text-xs text-muted-400">Make a payment request</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/"
+          class="
+            flex
+            items-center
+            gap-3
+            p-2
+            rounded-lg
+            text-muted-400
+            hover:text-primary-500 hover:bg-muted-100
+            dark:hover:bg-muted-800
+            transition-colors
+            duration-300
+          "
+        >
+          <i
+            class="iconify w-6 h-6"
+            data-icon="ph:arrows-left-right-duotone"
+          ></i>
+          <div class="font-sans">
+            <h5
+              class="text-sm font-semibold text-muted-800 dark:text-muted-200"
+            >
+              Transfer
+            </h5>
+            <p class="text-xs text-muted-400">Transfer between accounts</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

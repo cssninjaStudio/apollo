@@ -43,18 +43,26 @@
           title-font
           font-medium
           items-center
+          gap-2
           text-muted-900
           dark:text-muted-100
         "
       >
         <img
-          class="h-11"
-          src="/img/logo/logo-square.svg"
-          alt="Vite logo"
-          width="44"
-          height="44"
+          src="/img/logo/logo-square-outline.svg"
+          class="w-10 h-10 dark:invert"
+          alt="App logo"
+          width="48"
+          height="48"
         />
-        <span class="font-heading font-bold text-2xl ml-3">Mistral</span>
+        <img
+          src="/img/logo/text.svg"
+          class="w-28 dark:invert"
+          :class="$store.app.isLayoutCompact ? 'hidden' : 'block'"
+          alt="App logo"
+          width=""
+          height=""
+        />
       </a>
 
       <!-- Hamburger -->
@@ -135,7 +143,7 @@
       >
         <li>
           <a
-            href="https://cssninja.io/product/mistral"
+            href="https://cssninja.io/product/apollo"
             class="
               block
               text-base
@@ -170,7 +178,7 @@
         </li>
         <li>
           <a
-            href="https://docs.cssninja.io/mistral/"
+            href="https://docs.cssninja.io/apollo/"
             class="
               block
               text-base
@@ -192,7 +200,7 @@
           {{> theme/theme-toggler}}
         </div>
         <a
-          href="https://docs.cssninja.io/mistral/"
+          href="https://docs.cssninja.io/apollo/"
           class="
             relative
             w-full
@@ -228,7 +236,7 @@
         {{> theme/theme-toggler}}
       </div>
       <a
-        href="https://docs.cssninja.io/mistral/"
+        href="https://docs.cssninja.io/apollo/"
         class="
           relative
           font-sans font-normal

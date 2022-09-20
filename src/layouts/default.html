@@ -11,7 +11,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/img/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mistral - Tailwind CSS Landing Page</title>
+    <title>Apollo - Tailwind CSS Banking Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,19 +24,36 @@
   <body class="w-full h-full bg-white dark:bg-muted-900">
     <!-- prettier-ignore -->
 
-    <!--Site navbar-->
-    {{> navigation/navbar}}
+    <!--Site sidebar-->
+    {{> navigation/sidebar/sidebar}}
 
-    <!--Site search-->
-    {{> navigation/navbar-search}}
+    <!--Site panel-->
+    {{> navigation/panel/panel}}
 
-    <main class="w-full">
-      <!-- Renders the page body -->
-      {{> @partial-block }}
+    <main
+      class="relative w-full overflow-hidden transition-all duration-300 z-10"
+      :class="$store.app.isLayoutCompact ? 'ml-0 lg:w-[calc(100%_-_80px)] lg:ml-[80px]' : 'ml-0 lg:w-[calc(100%_-_250px)] lg:ml-[250px]'"
+    >
+      <!--Container-->
+      <div
+        class="
+          w-full
+          max-w-5xl
+          min-h-screen
+          mx-auto
+          px-4
+          md:px-6
+          bg-white
+          dark:bg-muted-900
+        "
+      >
+        <!--Site navbar-->
+        {{> navigation/navbar/navbar}}
+
+        <!-- Renders the page body -->
+        {{> @partial-block }}
+      </div>
     </main>
-
-    <!--Site footer-->
-    {{> footer/footer}}
 
     <!--Back to top button-->
     {{> misc/backtotop}}
