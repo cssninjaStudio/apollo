@@ -7,6 +7,7 @@ import { boxCarousel } from './carousel'
 import { video } from './video'
 import { collapse } from './collapse'
 import { dropdown } from './dropdown'
+import { dropFilter } from './dropfilter'
 import { gallery } from './gallery'
 
 window.layout = layout
@@ -19,3 +20,4 @@ window.video = video
 window.collapse = collapse
 window.gallery = gallery
 window.dropdown = dropdown
+window.dropFilter = dropFilter

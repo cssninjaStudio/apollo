@@ -1,0 +1,224 @@
+<div
+  x-data="dropFilter()"
+  class="group relative hidden md:block"
+  @click.away="close()"
+>
+  <button
+    type="button"
+    class="
+      font-sans font-medium
+      text-sm
+      inline-flex
+      items-center
+      justify-center
+      gap-2
+      h-9
+      px-6
+      rounded-full
+      bg-muted-100
+      group-hover:bg-muted-200
+      dark:bg-muted-800 dark:group-hover:bg-muted-700
+      text-muted-500
+      group-hover:text-muted-600
+      dark:group-hover:text-muted-300
+      transition-all
+      duration-300
+      tw-accessibility
+    "
+    @click="open()"
+  >
+    <i
+      class="iconify w-3 h-3 group-hover:text-primary-500"
+      data-icon="lucide:filter"
+    ></i>
+    <span>Add Filter</span>
+  </button>
+
+  <!--Dropdown menu-->
+  <div
+    x-show="isOpen"
+    x-transition
+    class="
+      absolute
+      top-11
+      left-0
+      w-[660px]
+      grid grid-cols-12
+      bg-white
+      dark:bg-muted-1000
+      rounded-lg
+      overflow-hidden
+      border border-muted-200
+      dark:border-muted-800
+      shadow-xl shadow-muted-400/20
+      dark:shadow-muted-800/20
+    "
+  >
+    <!--Menu-->
+    <div class="col-span-4 p-6 space-y-2 bg-muted-50 dark:bg-muted-900">
+      <!--Menu item-->
+      <button
+        data-tab="tab-1"
+        class="
+          w-full
+          flex
+          items-center
+          gap-2
+          py-2
+          px-3
+          rounded-lg
+          border-2
+          font-sans
+          text-sm
+          cursor-pointer
+          transition-all
+          duration-300
+          tw-accessibility
+          click-blur
+        "
+        :class="activeTab === 'tab-1' ? 'text-primary-500 border-primary-500 bg-primary-500/10' : 'text-muted-500 hover:text-muted-600 dark:hover:text-muted-300 border-muted-50 dark:border-muted-900 hover:bg-muted-200 dark:hover:bg-muted-800'"
+        @click="selectFilter($event)"
+      >
+        <i class="iconify w-4 h-4" data-icon="lucide:calendar"></i>
+        <span>Creation date</span>
+        <i class="iconify w-4 h-4 ml-auto" data-icon="lucide:chevron-right"></i>
+      </button>
+      <!--Menu item-->
+      <button
+        data-tab="tab-2"
+        class="
+          w-full
+          flex
+          items-center
+          gap-2
+          py-2
+          px-3
+          rounded-lg
+          border-2
+          font-sans
+          text-sm
+          cursor-pointer
+          transition-all
+          duration-300
+          tw-accessibility
+          click-blur
+        "
+        :class="activeTab === 'tab-2' ? 'text-primary-500 border-primary-500 bg-primary-500/10' : 'text-muted-500 hover:text-muted-600 dark:hover:text-muted-300 border-muted-50 dark:border-muted-900 hover:bg-muted-200 dark:hover:bg-muted-800'"
+        @click="selectFilter($event)"
+      >
+        <i class="iconify w-4 h-4" data-icon="lucide:search"></i>
+        <span>Keywords</span>
+        <i class="iconify w-4 h-4 ml-auto" data-icon="lucide:chevron-right"></i>
+      </button>
+      <!--Menu item-->
+      <button
+        data-tab="tab-3"
+        class="
+          w-full
+          flex
+          items-center
+          gap-2
+          py-2
+          px-3
+          rounded-lg
+          border-2
+          font-sans
+          text-sm
+          cursor-pointer
+          transition-all
+          duration-300
+          tw-accessibility
+          click-blur
+        "
+        :class="activeTab === 'tab-3' ? 'text-primary-500 border-primary-500 bg-primary-500/10' : 'text-muted-500 hover:text-muted-600 dark:hover:text-muted-300 border-muted-50 dark:border-muted-900 hover:bg-muted-200 dark:hover:bg-muted-800'"
+        @click="selectFilter($event)"
+      >
+        <i class="iconify w-4 h-4" data-icon="lucide:loader"></i>
+        <span>Status</span>
+        <i class="iconify w-4 h-4 ml-auto" data-icon="lucide:chevron-right"></i>
+      </button>
+      <!--Menu item-->
+      <button
+        data-tab="tab-4"
+        class="
+          w-full
+          flex
+          items-center
+          gap-2
+          py-2
+          px-3
+          rounded-lg
+          border-2
+          font-sans
+          text-sm
+          cursor-pointer
+          transition-all
+          duration-300
+          tw-accessibility
+          click-blur
+        "
+        :class="activeTab === 'tab-4' ? 'text-primary-500 border-primary-500 bg-primary-500/10' : 'text-muted-500 hover:text-muted-600 dark:hover:text-muted-300 border-muted-50 dark:border-muted-900 hover:bg-muted-200 dark:hover:bg-muted-800'"
+        @click="selectFilter($event)"
+      >
+        <i class="iconify w-4 h-4" data-icon="lucide:piggy-bank"></i>
+        <span>Accounts</span>
+        <i class="iconify w-4 h-4 ml-auto" data-icon="lucide:chevron-right"></i>
+      </button>
+      <!--Menu item-->
+      <button
+        data-tab="tab-5"
+        class="
+          w-full
+          flex
+          items-center
+          gap-2
+          py-2
+          px-3
+          rounded-lg
+          border-2
+          font-sans
+          text-sm
+          cursor-pointer
+          transition-all
+          duration-300
+          tw-accessibility
+          click-blur
+        "
+        :class="activeTab === 'tab-5' ? 'text-primary-500 border-primary-500 bg-primary-500/10' : 'text-muted-500 hover:text-muted-600 dark:hover:text-muted-300 border-muted-50 dark:border-muted-900 hover:bg-muted-200 dark:hover:bg-muted-800'"
+        @click="selectFilter($event)"
+      >
+        <i class="iconify w-4 h-4" data-icon="lucide:credit-card"></i>
+        <span>Payment</span>
+        <i class="iconify w-4 h-4 ml-auto" data-icon="lucide:chevron-right"></i>
+      </button>
+    </div>
+
+    <!--Filters-->
+    <div class="col-span-8 min-h-[350px] p-6">
+      <!--Date filter-->
+      <div x-show="activeTab === 'tab-1'">
+        {{> filter/transactions/transactions-dropdown-filters-date}}
+      </div>
+
+      <!--Keywords filter-->
+      <div x-show="activeTab === 'tab-2'">
+        {{> filter/transactions/transactions-dropdown-filters-keywords}}
+      </div>
+
+      <!--Status filter-->
+      <div x-show="activeTab === 'tab-3'">
+        {{> filter/transactions/transactions-dropdown-filters-status}}
+      </div>
+
+      <!--Accounts filter-->
+      <div x-show="activeTab === 'tab-4'">
+        {{> filter/transactions/transactions-dropdown-filters-accounts}}
+      </div>
+
+      <!--Payment filter-->
+      <div x-show="activeTab === 'tab-5'">
+        {{> filter/transactions/transactions-dropdown-filters-payment}}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,666 @@
+<div class="flex flex-col">
+  <div class="px-3">
+    <p class="font-sans text-sm text-muted-400">
+      Show transactions made within
+    </p>
+    <div class="relative">
+      <div class="relative group">
+        <select
+          title="select"
+          class="
+            appearance-none
+            px-3
+            py-2
+            h-10
+            text-sm
+            leading-5
+            font-sans
+            w-full
+            rounded
+            border border-muted-300
+            bg-white
+            text-muted-600
+            placeholder-gray-300
+            focus:border-muted-300 focus:shadow-lg
+            dark:placeholder-gray-600
+            dark:bg-muted-900
+            dark:text-muted-200
+            dark:border-muted-800
+            dark:focus:border-muted-800
+            tw-accessibility
+            transition-all
+            duration-300
+          "
+        >
+          <option>All time</option>
+          <option>Last 30 days</option>
+          <option>This month</option>
+          <option>Last month</option>
+          <option>This year</option>
+          <option>Last year</option>
+        </select>
+        <div
+          class="
+            absolute
+            top-0
+            right-0
+            h-10
+            w-10
+            flex
+            justify-center
+            items-center
+            text-muted-400
+            transition-transform
+            duration-300
+            group-focus-within:-rotate-180
+          "
+        >
+          <i class="iconify w-4 h-4" data-icon="lucide:chevron-down"></i>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-6 mb-4 border-t border-muted-200 dark:border-muted-800" />
+    <div class="grid grid-cols-2 gap-8">
+      <!--Calendar group-->
+      <div>
+        <div class="relative px-3 mb-3">
+          <label class="font-alt text-sm text-muted-400">From</label>
+          <div class="group relative">
+            <input
+              type="text"
+              class="
+                px-3
+                py-2
+                h-8
+                text-sm
+                leading-5
+                font-sans
+                w-full
+                rounded-md
+                bg-white
+                text-muted-600
+                border border-muted-300
+                focus:border-muted-300 focus:shadow-lg focus:shadow-gray-300/50
+                dark:focus:shadow-gray-800/50
+                placeholder:text-muted-300
+                dark:placeholder:text-muted-700
+                dark:bg-muted-900
+                dark:text-muted-200
+                dark:border-muted-800
+                dark:focus:border-muted-800
+                tw-accessibility
+                transition-all
+                duration-300
+              "
+              placeholder=""
+            />
+          </div>
+        </div>
+        <!--Calendar-->
+        <div class="flex flex-col">
+          <div class="flex items-center justify-between px-3 mb-2">
+            <button
+              class="
+                flex
+                items-center
+                justify-center
+                w-6
+                text-muted-400
+                cursor-pointer
+              "
+            >
+              <i class="iconify w-3 h-3" data-icon="lucide:arrow-left"></i>
+            </button>
+            <span
+              class="font-heading text-sm text-muted-700 dark:text-muted-100"
+            >
+              2021
+            </span>
+            <button
+              class="
+                flex
+                items-center
+                justify-center
+                w-6
+                text-muted-400
+                cursor-pointer
+              "
+            >
+              <i class="iconify w-3 h-3" data-icon="lucide:arrow-right"></i>
+            </button>
+          </div>
+          <div class="grid grid-cols-3 gap-1">
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              Jan
+            </button>
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              Feb
+            </button>
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              Mar
+            </button>
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              Apr
+            </button>
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              May
+            </button>
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              Jun
+            </button>
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              Jul
+            </button>
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              Aug
+            </button>
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              Sep
+            </button>
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              Oct
+            </button>
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              Nov
+            </button>
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              Dec
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--Calendar group-->
+      <div>
+        <div class="relative px-3 mb-3">
+          <label class="font-alt text-sm text-muted-400">To</label>
+          <div class="group relative">
+            <input
+              type="text"
+              class="
+                px-3
+                py-2
+                h-8
+                text-sm
+                leading-5
+                font-sans
+                w-full
+                rounded-md
+                bg-white
+                text-muted-600
+                border border-muted-300
+                focus:border-muted-300 focus:shadow-lg focus:shadow-gray-300/50
+                dark:focus:shadow-gray-800/50
+                placeholder:text-muted-300
+                dark:placeholder:text-muted-700
+                dark:bg-muted-900
+                dark:text-muted-200
+                dark:border-muted-800
+                dark:focus:border-muted-800
+                tw-accessibility
+                transition-all
+                duration-300
+              "
+              placeholder=""
+            />
+          </div>
+        </div>
+        <!--Calendar-->
+        <div class="flex flex-col">
+          <div class="flex items-center justify-between px-3 mb-2">
+            <button
+              class="
+                flex
+                items-center
+                justify-center
+                w-6
+                text-muted-400
+                cursor-pointer
+              "
+            >
+              <i class="iconify w-3 h-3" data-icon="lucide:arrow-left"></i>
+            </button>
+            <span
+              class="font-heading text-sm text-muted-700 dark:text-muted-100"
+            >
+              2022
+            </span>
+            <button
+              class="
+                flex
+                items-center
+                justify-center
+                w-6
+                text-muted-400
+                cursor-pointer
+              "
+            >
+              <i class="iconify w-3 h-3" data-icon="lucide:arrow-right"></i>
+            </button>
+          </div>
+          <div class="grid grid-cols-3 gap-1">
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              Jan
+            </button>
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              Feb
+            </button>
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              Mar
+            </button>
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              Apr
+            </button>
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              May
+            </button>
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              Jun
+            </button>
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              Jul
+            </button>
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              Aug
+            </button>
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              Sep
+            </button>
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              Oct
+            </button>
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              Nov
+            </button>
+            <button
+              class="
+                font-sans
+                text-xs text-muted-500
+                dark:text-muted-400
+                hover:text-muted-600
+                dark:hover:text-muted-200
+                flex
+                items-center
+                justify-center
+                py-1.5
+                px-2
+                rounded-md
+                hover:bg-muted-100
+                dark:hover:bg-muted-800
+              "
+            >
+              Dec
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
