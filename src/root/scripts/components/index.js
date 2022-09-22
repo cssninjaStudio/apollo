@@ -9,6 +9,7 @@ import { collapse } from './collapse'
 import { dropdown } from './dropdown'
 import { dropFilter } from './dropfilter'
 import { gallery } from './gallery'
+import { tabs } from './tabs'
 
 window.layout = layout
 window.navbar = navbar
@@ -21,3 +22,4 @@ window.collapse = collapse
 window.gallery = gallery
 window.dropdown = dropdown
 window.dropFilter = dropFilter
+window.tabs = tabs

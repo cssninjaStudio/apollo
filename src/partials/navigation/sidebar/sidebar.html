@@ -1,5 +1,7 @@
 <div
+  id="sidebar"
   x-data="sidebar()"
+  x-cloak
   class="
     fixed
     top-0
@@ -107,10 +109,13 @@
             gap-4
             py-3
             rounded-lg
-            bg-primary-200
-            dark:bg-primary-600/20
-            text-primary-600
-            dark:text-primary-500
+            text-muted-500
+            hover:bg-muted-200
+            dark:hover:bg-muted-900
+            hover:text-muted-600
+            dark:hover:text-muted-200
+            transition-colors
+            duration-300
           "
           :class="$store.app.isLayoutCompact ? 'px-1 justify-center' : 'px-4'"
         >
@@ -156,7 +161,7 @@
       </li>
       <li>
         <a
-          href="/"
+          href="/payments.html"
           class="
             flex
             items-center

@@ -214,14 +214,14 @@ module.exports = {
         '.placeload': {
           position: 'relative',
           background:
-            'linear-gradient(to right, rgb(0 0 0 / 7%) 8%, rgb(0 0 0 / 15%) 18%, rgb(0 0 0 / 7%) 33%)',
+            'linear-gradient(to right, rgb(148 163 184 / 20%) 8%, rgb(148 163 184 / 30%) 18%, rgb(148 163 184 / 20%) 33%)',
           'background-size': '800px 104px',
           color: 'transparent !important',
         },
-        '.dark .placeload': {
+        /*'.dark .placeload': {
           background:
             'linear-gradient(to right, rgb(255 255 255 / 15%) 8%, rgb(255 255 255 / 24%) 18%, rgb(255 255 255 / 15%) 33%)',
-        },
+        },*/
       })
     }),
     function ({ addBase, theme }) {

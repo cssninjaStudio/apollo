@@ -2,7 +2,7 @@
 {{#> default }}
 
 <!--Wrapper-->
-<div class="w-full pb-24">
+<div x-data="transactions()" class="w-full pb-24">
   <!--Header-->
   <div class="flex items-center justify-between py-6">
     <h2 class="font-heading text-3xl text-muted-800 dark:text-white">
@@ -97,8 +97,15 @@
       </button>
     </div>
 
+    <!--Table loader-->
+    <template x-if="isLoading">
+      {{> page/transactions/transactions-table-placeload}}
+    </template>
+
     <!--Table-->
-    {{> page/transactions/transactions-table}}
+    <template x-if="!isLoading">
+      {{> page/transactions/transactions-table}}
+    </template>
 
     <!--Footer-->
     <div class="flex items-center justify-end py-6">
