@@ -155,10 +155,20 @@ module.exports = {
           '0%': { 'background-position': '-468px 0' },
           '100%': { 'background-position': '468px 0' },
         },
+        stroke: {
+          '100%': { 'stroke-dashoffset': '0' },
+        },
+        scale: {
+          0: { transform: 'scale(0)', opacity: 0 },
+          '100%': { transform: 'scale(1)', opacity: 1 },
+        },
       },
       animation: {
         indeterminate: 'indeterminate 1s cubic-bezier(0.4, 0, 0.2, 1) infinite',
         placeload: 'placeload 1s linear infinite forwards',
+        circle: 'stroke 1.2s cubic-bezier(0.65, 0, 0.45, 1) forwards',
+        check: 'stroke 0.9s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards',
+        scale: 'scale 0.5s linear 0.5s forwards',
       },
     },
   },

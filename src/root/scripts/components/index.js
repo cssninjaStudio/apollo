@@ -10,6 +10,7 @@ import { dropdown } from './dropdown'
 import { dropFilter } from './dropfilter'
 import { gallery } from './gallery'
 import { tabs } from './tabs'
+import { wizard } from './wizard'
 
 window.layout = layout
 window.navbar = navbar
@@ -23,3 +24,4 @@ window.gallery = gallery
 window.dropdown = dropdown
 window.dropFilter = dropFilter
 window.tabs = tabs
+window.wizard = wizard

@@ -1,0 +1,218 @@
+<div
+  x-show="currentStep === 0"
+  x-data="{ showFaq: false }"
+  class="w-full flex flex-col md:flex-row items-center"
+>
+  <!--Column-->
+  <div x-show="!showFaq" class="w-full md:w-1/2">
+    <div class="max-w-md space-y-3 p-4">
+      <h2
+        class="font-heading font-bold text-3xl text-muted-800 dark:text-white"
+      >
+        Wondering on how to fund your business? Open a credit request.
+      </h2>
+      <p class="font-sans text-muted-500 dark:text-muted-400">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut optime,
+        secundum naturam affectum esse possit.
+      </p>
+      <div class="flex gap-2">
+        <button
+          class="
+            h-10
+            w-32
+            inline-flex
+            justify-center
+            items-center
+            gap-x-2
+            px-6
+            py-2
+            font-sans
+            text-sm text-white
+            bg-primary-500
+            rounded-full
+            shadow-lg shadow-primary-500/20
+            hover:shadow-xl
+            tw-accessibility
+            transition-all
+            duration-300
+          "
+          @click="nextStep()"
+        >
+          <span>Continue</span>
+        </button>
+        <button
+          class="
+            h-10
+            w-32
+            inline-flex
+            justify-center
+            items-center
+            gap-x-2
+            px-6
+            py-2
+            font-sans
+            text-sm text-primary-500
+            bg-transparent
+            hover:bg-muted-100
+            dark:hover:bg-muted-800
+            rounded-full
+            tw-accessibility
+            transition-all
+            duration-300
+          "
+          @click="showFaq = !showFaq"
+        >
+          <span>Learn More</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!--Column-->
+  <div x-show="!showFaq" class="w-full md:w-1/2">
+    <div class="max-w-sm mx-auto text-primary-500">
+      {{> vector/illustrations/man-wondering}}
+    </div>
+  </div>
+  <!--Faq-->
+  <div x-show="showFaq" class="w-full">
+    <h3
+      class="
+        font-heading font-semibold
+        text-4xl
+        mb-10
+        text-muted-800
+        dark:text-white
+      "
+    >
+      FAQ
+    </h3>
+    <!--Grid-->
+    <div class="grid md:grid-cols-3 gap-x-3 gap-y-6">
+      <!--Grid item-->
+      <div class="space-y-2">
+        <h4
+          class="
+            font-heading font-semibold
+            text-lg text-muted-800
+            dark:text-white
+          "
+        >
+          Are there any fees?
+        </h4>
+        <p class="font-sans text-sm text-muted-400">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tecum optime,
+          deinde etiam cum mediocri amico. Mihi, inquam, qui te id ipsum rogavi.
+        </p>
+      </div>
+      <!--Grid item-->
+      <div class="space-y-2">
+        <h4
+          class="
+            font-heading font-semibold
+            text-lg text-muted-800
+            dark:text-white
+          "
+        >
+          What are the durations?
+        </h4>
+        <p class="font-sans text-sm text-muted-400">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tecum optime,
+          deinde etiam cum mediocri amico. Mihi, inquam, qui te id ipsum rogavi?
+          An haec ab eo non dicuntur? Si qua in iis corrigere voluit, deteriora
+          fecit. Duo Reges: constructio interrete.
+        </p>
+      </div>
+      <!--Grid item-->
+      <div class="space-y-2">
+        <h4
+          class="
+            font-heading font-semibold
+            text-lg text-muted-800
+            dark:text-white
+          "
+        >
+          What are the conditions?
+        </h4>
+        <p class="font-sans text-sm text-muted-400">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tecum optime,
+          deinde etiam cum mediocri amico. Mihi, inquam, qui te id ipsum rogavi.
+        </p>
+      </div>
+      <!--Grid item-->
+      <div class="space-y-2">
+        <h4
+          class="
+            font-heading font-semibold
+            text-lg text-muted-800
+            dark:text-white
+          "
+        >
+          How do I sign up?
+        </h4>
+        <p class="font-sans text-sm text-muted-400">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tecum optime,
+          deinde etiam cum mediocri amico. Mihi, inquam, qui te id ipsum rogavi.
+        </p>
+      </div>
+      <!--Grid item-->
+      <div class="space-y-2">
+        <h4
+          class="
+            font-heading font-semibold
+            text-lg text-muted-800
+            dark:text-white
+          "
+        >
+          What's the credit rate?
+        </h4>
+        <p class="font-sans text-sm text-muted-400">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tecum optime,
+          deinde etiam cum mediocri amico. Mihi, inquam, qui te id ipsum rogavi.
+        </p>
+      </div>
+      <!--Grid item-->
+      <div class="space-y-2">
+        <h4
+          class="
+            font-heading font-semibold
+            text-lg text-muted-800
+            dark:text-white
+          "
+        >
+          Can I cancel it anytime?
+        </h4>
+        <p class="font-sans text-sm text-muted-400">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tecum optime,
+          deinde etiam cum mediocri amico. Mihi, inquam, qui te id ipsum rogavi.
+        </p>
+      </div>
+    </div>
+    <!--Back button-->
+    <div class="mt-10">
+      <button
+        class="
+          h-10
+          w-32
+          inline-flex
+          justify-center
+          items-center
+          gap-x-2
+          px-6
+          py-2
+          font-sans
+          text-sm text-primary-500
+          bg-muted-100
+          hover:bg-muted-200
+          dark:bg-muted-700 dark:hover:bg-muted-800
+          rounded-full
+          tw-accessibility
+          transition-all
+          duration-300
+        "
+        @click="showFaq = !showFaq"
+      >
+        <span>Go Back</span>
+      </button>
+    </div>
+  </div>
+</div>
