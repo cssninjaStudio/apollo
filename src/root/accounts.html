@@ -1,0 +1,131 @@
+<!--Start Layout-->
+{{#> default }}
+
+<!--Wrapper-->
+<div x-data="accounts()" class="w-full pb-24">
+  <!--Header-->
+  <div class="flex items-center justify-between py-6">
+    <h2 class="font-heading text-3xl text-muted-800 dark:text-white">
+      Accounts
+    </h2>
+  </div>
+
+  <!--Tabs wrapper-->
+  <div>
+    <!--Tabs-->
+    <div class="flex items-center justify-between overflow-hidden">
+      <div
+        class="
+          flex
+          gap-x-6
+          grow
+          font-sans
+          border-b border-muted-200
+          dark:border-muted-800
+          xs:overflow-x-auto
+        "
+      >
+        <a
+          data-tab="tab-1"
+          @click="toggle($event)"
+          class="
+            pb-2
+            select-none
+            border-b-2
+            cursor-pointer
+            transition-colors
+            duration-300
+          "
+          :class="
+            activeTab === 'tab-1'
+              ? 'text-muted-700 dark:text-muted-100 border-primary-500'
+              : 'text-muted-300 hover:text-muted-400 dark:text-muted-500 dark:hover:text-muted-400 border-transparent'
+          "
+        >
+          Accounts
+        </a>
+        <a
+          data-tab="tab-2"
+          @click="toggle($event)"
+          class="
+            pb-2
+            select-none
+            border-b-2
+            cursor-pointer
+            transition-colors
+            duration-300
+          "
+          :class="
+            activeTab === 'tab-2'
+              ? 'text-muted-700 dark:text-muted-100 border-primary-500'
+              : 'text-muted-300 hover:text-muted-400 dark:text-muted-500 dark:hover:text-muted-400 border-transparent'
+          "
+        >
+          Linked accounts
+        </a>
+        <a
+          data-tab="tab-3"
+          @click="toggle($event)"
+          class="
+            pb-2
+            select-none
+            border-b-2
+            cursor-pointer
+            transition-colors
+            duration-300
+          "
+          :class="
+            activeTab === 'tab-3'
+              ? 'text-muted-700 dark:text-muted-100 border-primary-500'
+              : 'text-muted-300 hover:text-muted-400 dark:text-muted-500 dark:hover:text-muted-400 border-transparent'
+          "
+        >
+          Transfer rules
+        </a>
+      </div>
+    </div>
+
+    <!--Tab content-->
+    <div class="w-full py-6">
+      <!--Accounts tab-->
+      <div x-show="activeTab === 'tab-1'" class="w-full">
+        <!--Balance-->
+        <div class="py-6">
+          <p class="font-heading text-xs text-muted-400 mb-1">Global balance</p>
+          <h3
+            class="
+              font-heading font-medium
+              mb-1
+              text-3xl text-muted-800
+              dark:text-muted-100
+            "
+          >
+            $15,389.22
+          </h3>
+        </div>
+        <!--Accounts list-->
+        {{> page/accounts/accounts-list}}
+      </div>
+      <!--Linked accounts tab-->
+      <div x-show="activeTab === 'tab-2'" class="w-full">
+        {{> page/accounts/accounts-placeholder}}
+      </div>
+      <!--Rules tab-->
+      <div x-show="activeTab === 'tab-3'" class="w-full">
+        <div class="mb-8">
+          <p class="font-heading text-sm text-muted-500 dark:text-muted-500">
+            You don't have any active rules
+          </p>
+        </div>
+        <!--Rules-->
+        {{> page/accounts/accounts-rules}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Account details panel-->
+{{> page/accounts/accounts-panel}}
+
+<!--End Layout-->
+{{/default}}

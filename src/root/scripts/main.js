@@ -36,6 +36,7 @@ Alpine.store('app', {
   isPanelOpen: false,
   isMobileOpen: false,
   isCardPanelOpen: false,
+  isAccountPanelOpen: false,
 })
 //Start Alpine
 Alpine.start()
