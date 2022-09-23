@@ -10,6 +10,7 @@ import Alpine from 'alpinejs'
 import intersect from '@alpinejs/intersect'
 import collapse from '@alpinejs/collapse'
 import persist from '@alpinejs/persist'
+import Tooltip from '@ryangjchandler/alpine-tooltip'
 
 import './demo'
 import './components'
@@ -22,6 +23,8 @@ Alpine.plugin(intersect)
 Alpine.plugin(collapse)
 //Init persist plugin
 Alpine.plugin(persist)
+//Init tooltip plugin
+Alpine.plugin(Tooltip)
 //Init Alpine store
 Alpine.store('app', {
   init() {
@@ -32,6 +35,7 @@ Alpine.store('app', {
   isLayoutCompact: false,
   isPanelOpen: false,
   isMobileOpen: false,
+  isCardPanelOpen: false,
 })
 //Start Alpine
 Alpine.start()
