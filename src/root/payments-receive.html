@@ -1,0 +1,32 @@
+<!--Start Layout-->
+{{#> minimal }}
+
+<!--Nav-->
+{{> page/payments-receive/receive-steps-navigation}}
+
+<!--Send money wizard-->
+<div class="w-full pt-32">
+  <div x-data="wizard(2)" x-cloak class="w-full max-w-6xl mx-auto px-4">
+    <div x-data="receivePayment()" class="w-full grid md:grid-cols-12 gap-10">
+      <!--Stepper column-->
+      <div class="md:col-span-3 lg:col-span-4">
+        <!--Stepper-->
+        {{> page/payments-receive/receive-stepper}}
+      </div>
+
+      <!--Steps column-->
+      <div class="md:col-span-9 lg:col-span-8">
+        <!--Step 1-->
+        {{> page/payments-receive/receive-step-1}}
+
+        <!--Step 2-->
+        {{> page/payments-receive/receive-step-2}}
+
+        <!--Step 3-->
+        {{> page/payments-receive/receive-step-3}}
+      </div>
+    </div>
+  </div>
+</div>
+<!--End Layout-->
+{{/minimal}}
