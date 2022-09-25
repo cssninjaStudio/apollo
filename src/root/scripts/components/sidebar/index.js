@@ -3,7 +3,7 @@ import Alpine from 'alpinejs'
 export function sidebar() {
   return {
     init() {
-      const sidebar = document.getElementById('sidebar')
+      const sidebar = document.getElementById('sidebar-menu')
       const links = sidebar.querySelectorAll('li a')
       let current = 0
       for (var i = 0; i < links.length; i++) {
