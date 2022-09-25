@@ -1,0 +1,359 @@
+<!--Step 5-->
+<div x-show="currentStep === 4" class="w-full">
+  <h2
+    class="
+      font-heading
+      text-2xl
+      md:text-3xl
+      text-muted-800
+      dark:text-white
+      mb-10
+    "
+  >
+    Set an amount to transfer
+  </h2>
+
+  <div class="w-full max-w-md">
+    <!--Amount input-->
+    <div class="group relative">
+      <input
+        type="number"
+        x-model="amount"
+        class="
+          p-4
+          pl-14
+          py-2
+          h-14
+          text-4xl
+          leading-5
+          font-sans
+          w-full
+          text-muted-600
+          border-b-2 border-muted-300
+          focus:border-primary-500
+          placeholder:text-muted-300
+          dark:placeholder:text-muted-700
+          dark:bg-muted-900
+          dark:text-muted-200
+          dark:border-muted-800
+          dark:focus:border-primary-500
+          outline-none
+          transition-all
+          duration-300
+        "
+        placeholder="0.00"
+        @keyup="setBalanceLimit()"
+      />
+      <div
+        class="
+          absolute
+          top-0
+          left-0
+          h-14
+          w-14
+          flex
+          justify-center
+          items-center
+          text-muted-400
+          dark:text-muted-600
+          group-focus-within:text-primary-500
+          transition-colors
+          duration-300
+          cursor-pointer
+        "
+      >
+        <i class="iconify w-8 h-8" data-icon="lucide:dollar-sign"></i>
+      </div>
+    </div>
+
+    <!--Transfer account-->
+    <div class="py-10">
+      <h4 class="font-heading text-sm mb-4 text-muted-600 dark:text-muted-400">
+        Transfer from:
+      </h4>
+      <!--Dropdown-->
+      <div x-data="dropdown()" class="relative w-full" @click.away="close()">
+        <button
+          type="button"
+          class="
+            w-full
+            p-4
+            click-blur
+            bg-white
+            dark:bg-muted-1000
+            rounded-xl
+            border border-muted-200
+            dark:border-muted-800
+          "
+          @click="open()"
+        >
+          <span class="w-full flex items-center gap-3 text-left">
+            <img
+              src="/img/logo/logo-square-outline.svg"
+              class="w-8 h-8 dark:invert"
+              alt="App logo"
+              width="48"
+              height="48"
+            />
+            <div>
+              <span
+                class="
+                  block
+                  font-heading
+                  text-sm text-muted-800
+                  dark:text-muted-200
+                "
+              >
+                checking xxx4869
+              </span>
+              <span
+                class="
+                  block
+                  font-heading
+                  text-xs text-muted-500
+                  dark:text-muted-400
+                "
+              >
+                $9,384.21
+              </span>
+            </div>
+            <i
+              class="
+                iconify
+                w-4
+                h-4
+                ml-auto
+                text-muted-400
+                transition-transform
+                duration-300
+              "
+              :class="isOpen && 'rotate-180'"
+              data-icon="lucide:chevron-down"
+            ></i>
+          </span>
+        </button>
+
+        <div
+          x-show="isOpen"
+          x-transition
+          class="
+            absolute
+            top-20
+            left-0
+            w-full
+            p-2
+            rounded-xl
+            border border-muted-200
+            dark:border-muted-800
+            bg-white
+            dark:bg-muted-1000
+            shadow-xl shadow-muted-400/10
+            dark:shadow-muted-800/10
+          "
+        >
+          <!--Accounts-->
+          <ul>
+            <!--Account-->
+            <li>
+              <button
+                type="button"
+                class="
+                  w-full
+                  flex
+                  items-center
+                  gap-3
+                  text-left
+                  py-2
+                  px-4
+                  rounded-xl
+                  hover:bg-muted-100
+                  dark:hover:bg-muted-900
+                  transition-colors
+                  duration-300
+                "
+              >
+                <img
+                  src="/img/logo/logo-square-outline.svg"
+                  class="w-8 h-8 dark:invert"
+                  alt="App logo"
+                  width="48"
+                  height="48"
+                />
+                <span class="block">
+                  <span
+                    class="
+                      block
+                      font-heading
+                      text-sm text-muted-800
+                      dark:text-muted-200
+                    "
+                  >
+                    checking xxx4869
+                  </span>
+                  <span
+                    class="
+                      block
+                      font-heading
+                      text-xs text-muted-500
+                      dark:text-muted-400
+                    "
+                  >
+                    $9,384.21
+                  </span>
+                </span>
+              </button>
+            </li>
+            <!--Account-->
+            <li>
+              <button
+                type="button"
+                class="
+                  w-full
+                  flex
+                  items-center
+                  gap-3
+                  text-left
+                  py-2
+                  px-4
+                  rounded-xl
+                  hover:bg-muted-100
+                  dark:hover:bg-muted-900
+                  transition-colors
+                  duration-300
+                "
+              >
+                <img
+                  src="/img/logo/logo-square-outline.svg"
+                  class="w-8 h-8 dark:invert"
+                  alt="App logo"
+                  width="48"
+                  height="48"
+                />
+                <span class="block">
+                  <span
+                    class="
+                      block
+                      font-heading
+                      text-sm text-muted-800
+                      dark:text-muted-200
+                    "
+                  >
+                    checking xxx4847
+                  </span>
+                  <span
+                    class="
+                      block
+                      font-heading
+                      text-xs text-muted-500
+                      dark:text-muted-400
+                    "
+                  >
+                    $3,511.92
+                  </span>
+                </span>
+              </button>
+            </li>
+            <!--Account-->
+            <li>
+              <button
+                type="button"
+                class="
+                  w-full
+                  flex
+                  items-center
+                  gap-3
+                  text-left
+                  py-2
+                  px-4
+                  rounded-xl
+                  hover:bg-muted-100
+                  dark:hover:bg-muted-900
+                  transition-colors
+                  duration-300
+                "
+              >
+                <img
+                  src="/img/logo/logo-square-outline.svg"
+                  class="w-8 h-8 dark:invert"
+                  alt="App logo"
+                  width="48"
+                  height="48"
+                />
+                <span class="block">
+                  <span
+                    class="
+                      block
+                      font-heading
+                      text-sm text-muted-800
+                      dark:text-muted-200
+                    "
+                  >
+                    savings xxx7862
+                  </span>
+                  <span
+                    class="
+                      block
+                      font-heading
+                      text-xs text-muted-500
+                      dark:text-muted-400
+                    "
+                  >
+                    $7,213.11
+                  </span>
+                </span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!--Buttons-->
+    <div class="flex gap-4">
+      <button
+        class="
+          w-full
+          h-12
+          inline-flex
+          justify-center
+          items-center
+          rounded-md
+          px-4
+          py-2
+          font-heading
+          text-sm text-muted-600
+          hover:text-muted-700
+          dark:text-muted-400 dark:hover:text-muted-100
+          bg-muted-100
+          hover:bg-muted-200
+          dark:bg-muted-800 dark:hover:bg-muted-700
+          transition-colors
+          duration-300
+        "
+        @click="prevStep()"
+      >
+        Previous
+      </button>
+      <button
+        class="
+          w-full
+          h-12
+          inline-flex
+          justify-center
+          items-center
+          rounded-md
+          px-4
+          py-2
+          font-heading
+          text-white text-sm
+          bg-primary-500
+        "
+        :class="amount === null || amount === 0 ? 'cursor-not-allowed opacity-70' : ''"
+        :disabled="amount === null || amount === 0"
+        @click="nextStep()"
+      >
+        Continue
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,92 @@
+<div x-show="currentStep === 0" class="w-full">
+  <h2
+    class="
+      font-heading
+      text-2xl
+      md:text-3xl
+      text-muted-800
+      dark:text-white
+      mb-8
+    "
+  >
+    Who are you paying?
+  </h2>
+
+  <div class="relative max-w-md space-y-3">
+    <div class="group relative">
+      <input
+        type="text"
+        x-model="recipient"
+        class="
+          p-4
+          pl-12
+          py-2
+          h-12
+          text-base
+          leading-5
+          font-sans
+          w-full
+          rounded-md
+          bg-white
+          text-muted-600
+          border border-muted-300
+          focus:border-muted-300 focus:shadow-lg focus:shadow-gray-300/50
+          dark:focus:shadow-gray-800/50
+          placeholder:text-muted-300
+          dark:placeholder:text-muted-700
+          dark:bg-muted-1000
+          dark:text-muted-200
+          dark:border-muted-800
+          dark:focus:border-muted-800
+          tw-accessibility
+          transition-all
+          duration-300
+        "
+        placeholder="Your recipient's legal name"
+      />
+      <div
+        class="
+          absolute
+          top-0
+          left-0
+          h-12
+          w-12
+          flex
+          justify-center
+          items-center
+          text-muted-400
+          dark:text-muted-600
+          group-focus-within:text-primary-500
+          transition-colors
+          duration-300
+          cursor-pointer
+        "
+      >
+        <i class="iconify w-5 h-5" data-icon="lucide:user"></i>
+      </div>
+    </div>
+
+    <div class="flex gap-2">
+      <button
+        class="
+          w-full
+          h-12
+          inline-flex
+          justify-center
+          items-center
+          rounded-md
+          px-4
+          py-2
+          font-heading
+          text-white text-sm
+          bg-primary-500
+        "
+        :class="recipient.length === 0 ? 'cursor-not-allowed opacity-70' : ''"
+        :disabled="recipient.length === 0"
+        @click="nextStep()"
+      >
+        Next
+      </button>
+    </div>
+  </div>
+</div>

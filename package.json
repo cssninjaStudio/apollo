@@ -28,6 +28,7 @@
     "alpinejs": "3.10.3",
     "apexcharts": "3.35.5",
     "lit": "2.3.1",
+    "numerable": "^0.3.15",
     "prism-theme-vars": "0.2.2",
     "prismjs": "1.23.0",
     "swiper": "8.3.2"

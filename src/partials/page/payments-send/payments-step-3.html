@@ -1,0 +1,177 @@
+<!--Step 3-->
+<div x-show="currentStep === 2" class="w-full">
+  <h2
+    class="
+      font-heading
+      text-2xl
+      md:text-3xl
+      text-muted-800
+      dark:text-white
+      mb-4
+    "
+  >
+    Recipient details
+  </h2>
+
+  <div class="w-full max-w-md">
+    <form class="py-4">
+      <!--Grid-->
+      <div class="grid md:grid-cols-2 gap-4">
+        <!--Field-->
+        <div class="group relative col-span-2">
+          <label class="font-alt text-sm text-slate-400">Recipient Name</label>
+          <div class="group relative">
+            <input
+              type="text"
+              :value="recipient"
+              class="
+                px-4
+                py-2
+                h-10
+                text-base
+                leading-5
+                font-sans
+                w-full
+                rounded-md
+                bg-muted-100
+                text-muted-600
+                border border-muted-300
+                focus:border-muted-300 focus:shadow-lg focus:shadow-gray-300/50
+                dark:focus:shadow-gray-800/50
+                placeholder:text-muted-300
+                dark:placeholder:text-muted-700
+                dark:bg-muted-1000
+                dark:text-muted-200
+                dark:border-muted-800
+                dark:focus:border-muted-800
+                tw-accessibility
+                transition-all
+                duration-300
+                pointer-events-none
+              "
+              readonly
+            />
+          </div>
+        </div>
+        <!--Field-->
+        <div class="group relative">
+          <label class="font-alt text-sm text-slate-400">Routing number</label>
+          <div class="group relative">
+            <input
+              type="number"
+              x-model="routingNumber"
+              class="
+                px-4
+                py-2
+                h-10
+                text-base
+                leading-5
+                font-sans
+                w-full
+                rounded-md
+                bg-white
+                text-muted-600
+                border border-muted-300
+                focus:border-muted-300 focus:shadow-lg focus:shadow-gray-300/50
+                dark:focus:shadow-gray-800/50
+                placeholder:text-muted-300
+                dark:placeholder:text-muted-700
+                dark:bg-muted-1000
+                dark:text-muted-200
+                dark:border-muted-800
+                dark:focus:border-muted-800
+                tw-accessibility
+                transition-all
+                duration-300
+              "
+              placeholder=""
+            />
+          </div>
+        </div>
+        <!--Field-->
+        <div class="group relative">
+          <label class="font-alt text-sm text-slate-400">
+            Prefix (optional)
+          </label>
+          <div class="group relative">
+            <input
+              type="number"
+              class="
+                px-4
+                py-2
+                h-10
+                text-base
+                leading-5
+                font-sans
+                w-full
+                rounded-md
+                bg-white
+                text-muted-600
+                border border-muted-300
+                focus:border-muted-300 focus:shadow-lg focus:shadow-gray-300/50
+                dark:focus:shadow-gray-800/50
+                placeholder:text-muted-300
+                dark:placeholder:text-muted-700
+                dark:bg-muted-1000
+                dark:text-muted-200
+                dark:border-muted-800
+                dark:focus:border-muted-800
+                tw-accessibility
+                transition-all
+                duration-300
+              "
+              placeholder=""
+            />
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="flex gap-4">
+      <button
+        class="
+          w-full
+          h-12
+          inline-flex
+          justify-center
+          items-center
+          rounded-md
+          px-4
+          py-2
+          font-heading
+          text-sm text-muted-600
+          hover:text-muted-700
+          dark:text-muted-400 dark:hover:text-muted-100
+          bg-muted-100
+          hover:bg-muted-200
+          dark:bg-muted-800 dark:hover:bg-muted-700
+          transition-colors
+          duration-300
+        "
+        @click="prevStep()"
+      >
+        Previous
+      </button>
+      <button
+        class="
+          w-full
+          h-12
+          inline-flex
+          justify-center
+          items-center
+          rounded-md
+          px-4
+          py-2
+          font-heading
+          text-white text-sm
+          bg-primary-500
+        "
+        :class="routingNumber === null ? 'cursor-not-allowed opacity-70' : ''"
+        :disabled="routingNumber === null"
+        @click="nextStep()"
+      >
+        Continue
+      </button>
+    </div>
+  </div>
+</div>

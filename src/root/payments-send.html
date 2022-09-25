@@ -1,0 +1,42 @@
+<!--Start Layout-->
+{{#> minimal }}
+
+<!--Nav-->
+{{> page/payments-send/payments-steps-navigation}}
+
+<!--Send money wizard-->
+<div class="w-full pt-32">
+  <div x-data="wizard(5)" x-cloak class="w-full max-w-6xl mx-auto px-4">
+    <div x-data="sendPayment()" class="w-full grid md:grid-cols-12 gap-10">
+      <!--Stepper column-->
+      <div class="md:col-span-3 lg:col-span-4">
+        <!--Stepper-->
+        {{> page/payments-send/payments-stepper}}
+      </div>
+
+      <!--Steps column-->
+      <div class="md:col-span-9 lg:col-span-8">
+        <!--Step 1-->
+        {{> page/payments-send/payments-step-1}}
+
+        <!--Step 2-->
+        {{> page/payments-send/payments-step-2}}
+
+        <!--Step 3-->
+        {{> page/payments-send/payments-step-3}}
+
+        <!--Step 4-->
+        {{> page/payments-send/payments-step-4}}
+
+        <!--Step 5-->
+        {{> page/payments-send/payments-step-5}}
+
+        <!--Step 6-->
+        {{> page/payments-send/payments-step-6}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--End Layout-->
+{{/minimal}}

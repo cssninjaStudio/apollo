@@ -1,0 +1,282 @@
+<div class="flex flex-col md:flex-row gap-4 xs:w-full xs:max-w-xs xs:mx-auto">
+  <div
+    class="
+      relative
+      flex
+      md:flex-col
+      xs:max-w-xs xs:mx-auto
+      justify-between
+      gap-7
+    "
+  >
+    <!--Progress-->
+    <div
+      class="
+        absolute
+        xs:top-1.5
+        top-2
+        xs:inset-x-0
+        left-2
+        md:-translate-x-1/2
+        mx-auto
+        w-[calc(100%_-_1rem)]
+        h-1
+        md:h-[calc(100%_-_1rem)] md:w-1
+        bg-muted-200
+        dark:bg-muted-700
+        z-0
+      "
+    ></div>
+    <!--Vertical progress-->
+    <div
+      class="
+        hidden
+        md:block
+        absolute
+        top-2
+        left-2
+        -translate-x-1/2
+        mx-auto
+        w-0.5
+        rounded-full
+        bg-primary-500
+        z-10
+        transition-all
+        duration-300
+      "
+      :style="`height: calc(${currentProgress}% - 0.5rem);`"
+    ></div>
+    <!--Horizontal progress (mobile)-->
+    <div
+      class="
+        md:hidden
+        absolute
+        top-[7px]
+        left-1.5
+        h-0.5
+        rounded-full
+        bg-primary-500
+        z-10
+        transition-all
+        duration-300
+      "
+      :style="`width: calc(${currentProgress}% - 0.5rem);`"
+    ></div>
+    <!--Node-->
+    <div
+      class="
+        relative
+        z-20
+        w-4
+        h-4
+        flex
+        items-center
+        justify-center
+        rounded-full
+        bg-muted-200
+        dark:bg-muted-700
+      "
+    >
+      <span
+        class="
+          block
+          w-2
+          h-2
+          rounded-full
+          bg-primary-500
+          transition-transform
+          duration-300
+        "
+        :class="currentStep >= 0 ? 'scale-1' : 'scale-0'"
+      ></span>
+    </div>
+    <!--Node-->
+    <div
+      class="
+        relative
+        z-20
+        w-4
+        h-4
+        flex
+        items-center
+        justify-center
+        rounded-full
+        bg-muted-200
+        dark:bg-muted-700
+      "
+    >
+      <span
+        class="
+          block
+          w-2
+          h-2
+          rounded-full
+          bg-primary-500
+          transition-transform
+          duration-300
+        "
+        :class="currentStep >= 1 ? 'scale-1' : 'scale-0'"
+      ></span>
+    </div>
+    <!--Node-->
+    <div
+      class="
+        relative
+        z-20
+        w-4
+        h-4
+        flex
+        items-center
+        justify-center
+        rounded-full
+        bg-muted-200
+        dark:bg-muted-700
+      "
+    >
+      <span
+        class="
+          w-2
+          h-2
+          rounded-full
+          bg-primary-500
+          transition-transform
+          duration-300
+        "
+        :class="currentStep >= 2 ? 'scale-1' : 'scale-0'"
+      ></span>
+    </div>
+    <!--Node-->
+    <div
+      class="
+        relative
+        z-20
+        w-4
+        h-4
+        flex
+        items-center
+        justify-center
+        rounded-full
+        bg-muted-200
+        dark:bg-muted-700
+      "
+    >
+      <span
+        class="
+          w-2
+          h-2
+          rounded-full
+          bg-primary-500
+          transition-transform
+          duration-300
+        "
+        :class="currentStep >= 3 ? 'scale-1' : 'scale-0'"
+      ></span>
+    </div>
+    <!--Node-->
+    <div
+      class="
+        relative
+        z-20
+        w-4
+        h-4
+        flex
+        items-center
+        justify-center
+        rounded-full
+        bg-muted-200
+        dark:bg-muted-700
+      "
+    >
+      <span
+        class="
+          w-2
+          h-2
+          rounded-full
+          bg-primary-500
+          transition-transform
+          duration-300
+        "
+        :class="currentStep >= 4 ? 'scale-1' : 'scale-0'"
+      ></span>
+    </div>
+    <!--Node-->
+    <div
+      class="
+        relative
+        z-20
+        w-4
+        h-4
+        flex
+        items-center
+        justify-center
+        rounded-full
+        bg-muted-200
+        dark:bg-muted-700
+      "
+    >
+      <span
+        class="
+          w-2
+          h-2
+          rounded-full
+          bg-primary-500
+          transition-transform
+          duration-300
+        "
+        :class="currentStep === 5 ? 'scale-1' : 'scale-0'"
+      ></span>
+    </div>
+  </div>
+  <div
+    class="relative flex md:flex-col justify-center md:justify-between gap-7"
+  >
+    <div class="h-4 leading-none" :class="currentStep === 0 ? '' : 'xs:hidden'">
+      <span
+        class="block font-heading text-xs"
+        :class="currentStep === 0 ? 'text-muted-800 dark:text-muted-100' : 'text-muted-400 dark:text-muted-500'"
+      >
+        Recipient
+      </span>
+    </div>
+    <div class="h-4 leading-none" :class="currentStep === 1 ? '' : 'xs:hidden'">
+      <span
+        class="block font-heading text-xs"
+        :class="currentStep === 1 ? 'text-muted-800 dark:text-muted-100' : 'text-muted-400 dark:text-muted-500'"
+      >
+        Payment method
+      </span>
+    </div>
+    <div class="h-4 leading-none" :class="currentStep === 2 ? '' : 'xs:hidden'">
+      <span
+        class="block font-heading text-xs"
+        :class="currentStep === 2 ? 'text-muted-800 dark:text-muted-100' : 'text-muted-400 dark:text-muted-500'"
+      >
+        Recipient details
+      </span>
+    </div>
+    <div class="h-4 leading-none" :class="currentStep === 3 ? '' : 'xs:hidden'">
+      <span
+        class="block font-heading text-xs"
+        :class="currentStep === 3 ? 'text-muted-800 dark:text-muted-100' : 'text-muted-400 dark:text-muted-500'"
+      >
+        Recipient address
+      </span>
+    </div>
+    <div class="h-4 leading-none" :class="currentStep === 4 ? '' : 'xs:hidden'">
+      <span
+        class="block font-heading text-xs"
+        :class="currentStep === 4 ? 'text-muted-800 dark:text-muted-100' : 'text-muted-400 dark:text-muted-500'"
+      >
+        Amount
+      </span>
+    </div>
+    <div class="h-4 leading-none" :class="currentStep === 5 ? '' : 'xs:hidden'">
+      <span
+        class="block font-heading text-xs"
+        :class="currentStep === 5 ? 'text-muted-800 dark:text-muted-100' : 'text-muted-400 dark:text-muted-500'"
+      >
+        Review
+      </span>
+    </div>
+  </div>
+</div>

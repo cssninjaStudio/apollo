@@ -23,6 +23,7 @@ specifiers:
   lint-staged: 11.0.0
   lit: 2.3.1
   npm-run-all: 4.1.5
+  numerable: ^0.3.15
   postcss: 8.4.5
   postcss-class-name-shortener: 2.0.0
   prettier: 2.3.1
@@ -48,6 +49,7 @@ dependencies:
   alpinejs: 3.10.3
   apexcharts: 3.35.5
   lit: 2.3.1
+  numerable: 0.3.15
   prism-theme-vars: 0.2.2
   prismjs: 1.23.0
   swiper: 8.3.2
@@ -2378,6 +2380,10 @@ packages:
     dependencies:
       boolbase: 1.0.0
     dev: true
+
+  /numerable/0.3.15:
+    resolution: {integrity: sha512-Cu0dX3OjvXmqIyGveN8HuEnafCIUCz269NORa4JKAERXCa/vWr+pBRlrWxBK4psLV9RuhJ+DPoJPisu2QMW0mg==}
+    dev: false
 
   /object-hash/3.0.0:
     resolution: {integrity: sha512-RSn9F68PjH9HqtltsSnqYC1XXoWe9Bju5+213R98cNGttag9q9yAOTzdbsqvIa7aNm5WffBZFpWYr2aWrklWAw==}

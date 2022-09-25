@@ -234,6 +234,10 @@ module.exports = {
         },*/
       })
     }),
+    function ({ addVariant }) {
+      addVariant('child', '& > *')
+      addVariant('child-hover', '& > *:hover')
+    },
     function ({ addBase, theme }) {
       function extractColorVars(colorObj, colorGroup = '') {
         return Object.keys(colorObj).reduce((vars, colorKey) => {

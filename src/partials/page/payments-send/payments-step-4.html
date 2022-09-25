@@ -1,0 +1,301 @@
+<!--Step 4-->
+<div x-show="currentStep === 3" class="w-full">
+  <h2
+    class="
+      font-heading
+      text-2xl
+      md:text-3xl
+      text-muted-800
+      dark:text-white
+      mb-4
+    "
+  >
+    Recipient address
+  </h2>
+
+  <div class="w-full max-w-md">
+    <form class="py-4">
+      <!--Grid-->
+      <div class="grid md:grid-cols-2 gap-4">
+        <!--Field-->
+        <div class="group relative col-span-2">
+          <label class="font-alt text-sm text-slate-400">Address line 1</label>
+          <div class="group relative">
+            <input
+              type="text"
+              x-model="addressMain"
+              class="
+                px-4
+                py-2
+                h-10
+                text-base
+                leading-5
+                font-sans
+                w-full
+                rounded-md
+                bg-white
+                text-muted-600
+                border border-muted-300
+                focus:border-muted-300 focus:shadow-lg focus:shadow-gray-300/50
+                dark:focus:shadow-gray-800/50
+                placeholder:text-muted-300
+                dark:placeholder:text-muted-700
+                dark:bg-muted-1000
+                dark:text-muted-200
+                dark:border-muted-800
+                dark:focus:border-muted-800
+                tw-accessibility
+                transition-all
+                duration-300
+              "
+            />
+          </div>
+        </div>
+        <!--Field-->
+        <div class="group relative col-span-2">
+          <label class="font-alt text-sm text-slate-400">Address line 2</label>
+          <div class="group relative">
+            <input
+              type="text"
+              x-model="addressSub"
+              class="
+                px-4
+                py-2
+                h-10
+                text-base
+                leading-5
+                font-sans
+                w-full
+                rounded-md
+                bg-white
+                text-muted-600
+                border border-muted-300
+                focus:border-muted-300 focus:shadow-lg focus:shadow-gray-300/50
+                dark:focus:shadow-gray-800/50
+                placeholder:text-muted-300
+                dark:placeholder:text-muted-700
+                dark:bg-muted-1000
+                dark:text-muted-200
+                dark:border-muted-800
+                dark:focus:border-muted-800
+                tw-accessibility
+                transition-all
+                duration-300
+              "
+            />
+          </div>
+        </div>
+        <!--Field-->
+        <div class="group relative">
+          <label class="font-alt text-sm text-slate-400">City</label>
+          <div class="group relative">
+            <input
+              type="text"
+              x-model="city"
+              class="
+                px-4
+                py-2
+                h-10
+                text-base
+                leading-5
+                font-sans
+                w-full
+                rounded-md
+                bg-white
+                text-muted-600
+                border border-muted-300
+                focus:border-muted-300 focus:shadow-lg focus:shadow-gray-300/50
+                dark:focus:shadow-gray-800/50
+                placeholder:text-muted-300
+                dark:placeholder:text-muted-700
+                dark:bg-muted-1000
+                dark:text-muted-200
+                dark:border-muted-800
+                dark:focus:border-muted-800
+                tw-accessibility
+                transition-all
+                duration-300
+              "
+              placeholder=""
+            />
+          </div>
+        </div>
+        <!--Field-->
+        <div class="group relative">
+          <label class="font-alt text-sm text-slate-400">Postal code</label>
+          <div class="group relative">
+            <input
+              type="text"
+              x-model="postalCode"
+              class="
+                px-4
+                py-2
+                h-10
+                text-base
+                leading-5
+                font-sans
+                w-full
+                rounded-md
+                bg-white
+                text-muted-600
+                border border-muted-300
+                focus:border-muted-300 focus:shadow-lg focus:shadow-gray-300/50
+                dark:focus:shadow-gray-800/50
+                placeholder:text-muted-300
+                dark:placeholder:text-muted-700
+                dark:bg-muted-1000
+                dark:text-muted-200
+                dark:border-muted-800
+                dark:focus:border-muted-800
+                tw-accessibility
+                transition-all
+                duration-300
+              "
+              placeholder=""
+            />
+          </div>
+        </div>
+        <!--Field-->
+        <div class="group relative">
+          <label class="font-alt text-sm text-slate-400">State</label>
+          <div class="group relative">
+            <input
+              type="text"
+              x-model="state"
+              class="
+                px-4
+                py-2
+                h-10
+                text-base
+                leading-5
+                font-sans
+                w-full
+                rounded-md
+                bg-white
+                text-muted-600
+                border border-muted-300
+                focus:border-muted-300 focus:shadow-lg focus:shadow-gray-300/50
+                dark:focus:shadow-gray-800/50
+                placeholder:text-muted-300
+                dark:placeholder:text-muted-700
+                dark:bg-muted-1000
+                dark:text-muted-200
+                dark:border-muted-800
+                dark:focus:border-muted-800
+                tw-accessibility
+                transition-all
+                duration-300
+              "
+              placeholder=""
+            />
+          </div>
+        </div>
+        <!--Field-->
+        <div class="relative">
+          <label class="font-alt text-sm text-slate-400">Country</label>
+          <div class="relative group">
+            <select
+              x-model="country"
+              class="
+                appearance-none
+                px-3
+                py-2
+                h-10
+                text-sm
+                leading-5
+                font-sans
+                w-full
+                rounded
+                border border-muted-300
+                bg-white
+                text-muted-600
+                placeholder-gray-300
+                focus:border-muted-300 focus:shadow-lg
+                dark:placeholder-gray-600
+                dark:bg-muted-900
+                dark:text-muted-200
+                dark:border-muted-800
+                dark:focus:border-muted-800
+                tw-accessibility
+                transition-all
+                duration-300
+              "
+            >
+              <option>Select country</option>
+              <option value="United States" selected>United States</option>
+              <option value="Canada">Canada</option>
+              <option value="France">France</option>
+              <option value="China">China</option>
+              <option value="Germany">Germany</option>
+            </select>
+            <div
+              class="
+                absolute
+                top-0
+                right-0
+                h-10
+                w-10
+                flex
+                justify-center
+                items-center
+                text-muted-400
+                transition-transform
+                duration-300
+                group-focus-within:-rotate-180
+              "
+            >
+              <i class="iconify w-4 h-4" data-icon="lucide:chevron-down"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="flex gap-4">
+      <button
+        class="
+          w-full
+          h-12
+          inline-flex
+          justify-center
+          items-center
+          rounded-md
+          px-4
+          py-2
+          font-heading
+          text-sm text-muted-600
+          hover:text-muted-700
+          dark:text-muted-400 dark:hover:text-muted-100
+          bg-muted-100
+          hover:bg-muted-200
+          dark:bg-muted-800 dark:hover:bg-muted-700
+          transition-colors
+          duration-300
+        "
+        @click="prevStep()"
+      >
+        Previous
+      </button>
+      <button
+        class="
+          w-full
+          h-12
+          inline-flex
+          justify-center
+          items-center
+          rounded-md
+          px-4
+          py-2
+          font-heading
+          text-white text-sm
+          bg-primary-500
+        "
+        :class="addressMain.length === 0 || addressSub.length === 0 || postalCode.length === 0 || city.length === 0 || state.length === 0 || country.length === 0 ? 'cursor-not-allowed opacity-70' : ''"
+        :disabled="addressMain.length === 0 || addressSub.length === 0 || postalCode.length === 0 || city.length === 0 || state.length === 0 || country.length === 0"
+        @click="nextStep()"
+      >
+        Continue
+      </button>
+    </div>
+  </div>
+</div>
