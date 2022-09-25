@@ -1,0 +1,80 @@
+<div class="h-full border-r border-muted-200 dark:border-muted-800">
+  <ul class="-mr-0.5 xs:flex xs:gap-4">
+    <li>
+      <a
+        class="
+          flex
+          w-full
+          py-2
+          font-heading
+          text-sm
+          cursor-pointer
+          md:border-r-[3px]
+          xs:border-b-[3px]
+        "
+        :class="activeTab === 'tab-1' ? 'text-muted-800 dark:text-muted-100 border-primary-500' : 'text-muted-500 dark:text-muted-400 border-transparent'"
+        data-tab="tab-1"
+        @click.prevent="toggle($event)"
+      >
+        Personal
+      </a>
+    </li>
+    <li>
+      <a
+        class="
+          flex
+          w-full
+          py-2
+          font-heading
+          text-sm
+          cursor-pointer
+          md:border-r-[3px]
+          xs:border-b-[3px]
+        "
+        :class="activeTab === 'tab-2' ? 'text-muted-800 dark:text-muted-100 border-primary-500' : 'text-muted-500 dark:text-muted-400 border-transparent'"
+        data-tab="tab-2"
+        @click.prevent="toggle($event)"
+      >
+        Security
+      </a>
+    </li>
+    <li>
+      <a
+        class="
+          flex
+          w-full
+          py-2
+          font-heading
+          text-sm
+          cursor-pointer
+          md:border-r-[3px]
+          xs:border-b-[3px]
+        "
+        data-tab="tab-3"
+        :class="activeTab === 'tab-3' ? 'text-muted-800 dark:text-muted-100 border-primary-500' : 'text-muted-500 dark:text-muted-400 border-transparent'"
+        @click.prevent="toggle($event)"
+      >
+        Notifications
+      </a>
+    </li>
+    <li>
+      <a
+        class="
+          flex
+          w-full
+          py-2
+          font-heading
+          text-sm
+          cursor-pointer
+          md:border-r-[3px]
+          xs:border-b-[3px]
+        "
+        data-tab="tab-4"
+        :class="activeTab === 'tab-4' ? 'text-muted-800 dark:text-muted-100 border-primary-500' : 'text-muted-500 dark:text-muted-400 border-transparent'"
+        @click.prevent="toggle($event)"
+      >
+        API Tokens
+      </a>
+    </li>
+  </ul>
+</div>

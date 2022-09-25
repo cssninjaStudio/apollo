@@ -1,0 +1,40 @@
+<div x-show="activeTab === 'tab-4'">
+  <!--Placeholder-->
+  <div class="px-8 py-12 text-center bg-muted-100 dark:bg-muted-1000">
+    <div class="w-full max-w-lg mx-auto space-y-3">
+      <h3 class="font-heading text-lg text-muted-800 dark:text-white">
+        You currently have no API tokens
+      </h3>
+      <p class="font-sans text-muted-500">
+        If you need to connect to the Apollo backend, you can create an API
+        token to be able to connect to our services from an external app.
+      </p>
+
+      <div class="flex items-center justify-center">
+        <button
+          class="
+            h-10
+            w-40
+            inline-flex
+            justify-center
+            items-center
+            gap-x-2
+            px-6
+            py-2
+            font-sans
+            text-sm text-white
+            bg-primary-500
+            rounded-full
+            shadow-lg shadow-primary-500/20
+            hover:shadow-xl
+            tw-accessibility
+            transition-all
+            duration-300
+          "
+        >
+          <span>Create token</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

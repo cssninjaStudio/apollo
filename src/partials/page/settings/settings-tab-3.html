@@ -1,0 +1,792 @@
+<div
+  x-show="activeTab === 'tab-3'"
+  class="py-6 space-y-10 divide-muted-200 dark:divide-muted-800"
+>
+  <!--Statements-->
+  <div class="grid md:grid-cols-12 gap-8">
+    <!--Column-->
+    <div class="md:col-span-4">
+      <h3
+        class="font-heading font-medium mb-1 text-muted-800 dark:text-muted-100"
+      >
+        Account activity
+      </h3>
+      <p class="font-heading text-sm text-muted-500 dark:text-muted-400">
+        Customize what email notifications you want to receive about
+        transactions on your account.
+      </p>
+    </div>
+    <!--Column-->
+    <div class="md:col-span-8">
+      <h3
+        class="
+          font-heading
+          text-xs
+          pb-4
+          px-4
+          border-b border-muted-200
+          dark:border-muted-800
+          text-muted-800
+          dark:text-muted-100
+        "
+      >
+        Activity
+      </h3>
+      <div
+        class="flex flex-col divide-y divide-muted-200 dark:divide-muted-800"
+      >
+        <!--Item-->
+        <div class="group">
+          <a
+            href="#"
+            class="
+              flex
+              items-center
+              gap-4
+              font-heading
+              text-sm
+              p-4
+              text-muted-600
+              dark:text-muted-400
+              hover:bg-muted-100
+              dark:hover:bg-muted-800
+              transition-colors
+              duration-300
+            "
+          >
+            <label
+              for="switch-thin-2"
+              class="flex items-center gap-4 cursor-pointer"
+            >
+              <span class="block relative h-4">
+                <input
+                  id="switch-thin-2"
+                  type="checkbox"
+                  class="
+                    peer
+                    cursor-pointer
+                    opacity-0
+                    absolute
+                    h-full
+                    w-full
+                    z-20
+                  "
+                  checked
+                />
+                <span
+                  class="
+                    absolute
+                    flex
+                    items-center
+                    justify-center
+                    w-6
+                    h-6
+                    border
+                    bg-white
+                    dark:bg-slate-700 dark:border-slate-600
+                    rounded-full
+                    shadow
+                    -left-1
+                    top-1/2
+                    -translate-y-1/2
+                    transition
+                    peer-checked:-translate-y-1/2 peer-checked:translate-x-full
+                  "
+                ></span>
+                <span
+                  class="
+                    block
+                    w-10
+                    h-4
+                    bg-slate-300
+                    dark:bg-slate-600
+                    rounded-full
+                    shadow-inner
+                    peer-checked:bg-violet-400
+                    peer-focus:ring-0
+                    outline-1 outline-transparent
+                    peer-focus:outline-dashed peer-focus:outline-gray-300
+                    dark:peer-focus:outline-gray-600
+                    peer-focus:outline-offset-2
+                    transition-all
+                    duration-300
+                  "
+                ></span>
+              </span>
+              <div>
+                <h3 class="font-heading text-xs text-muted-400">Incoming</h3>
+                <span>Incoming transactions</span>
+              </div>
+            </label>
+          </a>
+        </div>
+        <!--Item-->
+        <div class="group">
+          <a
+            href="#"
+            class="
+              flex
+              items-center
+              gap-4
+              font-heading
+              text-sm
+              p-4
+              text-muted-600
+              dark:text-muted-400
+              hover:bg-muted-100
+              dark:hover:bg-muted-800
+              transition-colors
+              duration-300
+            "
+          >
+            <label
+              for="switch-thin-1"
+              class="flex items-center gap-4 cursor-pointer"
+            >
+              <span class="block relative h-4">
+                <input
+                  id="switch-thin-1"
+                  type="checkbox"
+                  class="
+                    peer
+                    cursor-pointer
+                    opacity-0
+                    absolute
+                    h-full
+                    w-full
+                    z-20
+                  "
+                />
+                <span
+                  class="
+                    absolute
+                    flex
+                    items-center
+                    justify-center
+                    w-6
+                    h-6
+                    border
+                    bg-white
+                    dark:bg-slate-700 dark:border-slate-600
+                    rounded-full
+                    shadow
+                    -left-1
+                    top-1/2
+                    -translate-y-1/2
+                    transition
+                    peer-checked:-translate-y-1/2 peer-checked:translate-x-full
+                  "
+                ></span>
+                <span
+                  class="
+                    block
+                    w-10
+                    h-4
+                    bg-slate-300
+                    dark:bg-slate-600
+                    rounded-full
+                    shadow-inner
+                    peer-checked:bg-violet-400
+                    peer-focus:ring-0
+                    outline-1 outline-transparent
+                    peer-focus:outline-dashed peer-focus:outline-gray-300
+                    dark:peer-focus:outline-gray-600
+                    peer-focus:outline-offset-2
+                    transition-all
+                    duration-300
+                  "
+                ></span>
+              </span>
+              <div>
+                <h3 class="font-heading text-xs text-muted-400">Outgoing</h3>
+                <span>Outgoing transactions</span>
+              </div>
+            </label>
+          </a>
+        </div>
+        <!--Item-->
+        <div class="group">
+          <a
+            href="#"
+            class="
+              flex
+              items-center
+              gap-4
+              font-heading
+              text-sm
+              p-4
+              text-muted-600
+              dark:text-muted-400
+              hover:bg-muted-100
+              dark:hover:bg-muted-800
+              transition-colors
+              duration-300
+            "
+          >
+            <label
+              for="switch-thin-3"
+              class="flex items-center gap-4 cursor-pointer"
+            >
+              <span class="block relative h-4">
+                <input
+                  id="switch-thin-3"
+                  type="checkbox"
+                  class="
+                    peer
+                    cursor-pointer
+                    opacity-0
+                    absolute
+                    h-full
+                    w-full
+                    z-20
+                  "
+                />
+                <span
+                  class="
+                    absolute
+                    flex
+                    items-center
+                    justify-center
+                    w-6
+                    h-6
+                    border
+                    bg-white
+                    dark:bg-slate-700 dark:border-slate-600
+                    rounded-full
+                    shadow
+                    -left-1
+                    top-1/2
+                    -translate-y-1/2
+                    transition
+                    peer-checked:-translate-y-1/2 peer-checked:translate-x-full
+                  "
+                ></span>
+                <span
+                  class="
+                    block
+                    w-10
+                    h-4
+                    bg-slate-300
+                    dark:bg-slate-600
+                    rounded-full
+                    shadow-inner
+                    peer-checked:bg-violet-400
+                    peer-focus:ring-0
+                    outline-1 outline-transparent
+                    peer-focus:outline-dashed peer-focus:outline-gray-300
+                    dark:peer-focus:outline-gray-600
+                    peer-focus:outline-offset-2
+                    transition-all
+                    duration-300
+                  "
+                ></span>
+              </span>
+              <div>
+                <h3 class="font-heading text-xs text-muted-400">Failed</h3>
+                <span>Failed transactions</span>
+              </div>
+            </label>
+          </a>
+        </div>
+        <!--Item-->
+        <div class="group">
+          <a
+            href="#"
+            class="
+              flex
+              items-center
+              gap-4
+              font-heading
+              text-sm
+              p-4
+              text-muted-600
+              dark:text-muted-400
+              hover:bg-muted-100
+              dark:hover:bg-muted-800
+              transition-colors
+              duration-300
+            "
+          >
+            <label
+              for="switch-thin-4"
+              class="flex items-center gap-4 cursor-pointer"
+            >
+              <span class="block relative h-4">
+                <input
+                  id="switch-thin-4"
+                  type="checkbox"
+                  class="
+                    peer
+                    cursor-pointer
+                    opacity-0
+                    absolute
+                    h-full
+                    w-full
+                    z-20
+                  "
+                />
+                <span
+                  class="
+                    absolute
+                    flex
+                    items-center
+                    justify-center
+                    w-6
+                    h-6
+                    border
+                    bg-white
+                    dark:bg-slate-700 dark:border-slate-600
+                    rounded-full
+                    shadow
+                    -left-1
+                    top-1/2
+                    -translate-y-1/2
+                    transition
+                    peer-checked:-translate-y-1/2 peer-checked:translate-x-full
+                  "
+                ></span>
+                <span
+                  class="
+                    block
+                    w-10
+                    h-4
+                    bg-slate-300
+                    dark:bg-slate-600
+                    rounded-full
+                    shadow-inner
+                    peer-checked:bg-violet-400
+                    peer-focus:ring-0
+                    outline-1 outline-transparent
+                    peer-focus:outline-dashed peer-focus:outline-gray-300
+                    dark:peer-focus:outline-gray-600
+                    peer-focus:outline-offset-2
+                    transition-all
+                    duration-300
+                  "
+                ></span>
+              </span>
+              <div>
+                <h3 class="font-heading text-xs text-muted-400">Uncashed</h3>
+                <span>Uncashed cheques</span>
+              </div>
+            </label>
+          </a>
+        </div>
+        <!--Item-->
+        <div class="group">
+          <a
+            href="#"
+            class="
+              flex
+              items-center
+              gap-4
+              font-heading
+              text-sm
+              p-4
+              text-muted-600
+              dark:text-muted-400
+              hover:bg-muted-100
+              dark:hover:bg-muted-800
+              transition-colors
+              duration-300
+            "
+          >
+            <label
+              for="switch-thin-5"
+              class="flex items-center gap-4 cursor-pointer"
+            >
+              <span class="block relative h-4">
+                <input
+                  id="switch-thin-5"
+                  type="checkbox"
+                  class="
+                    peer
+                    cursor-pointer
+                    opacity-0
+                    absolute
+                    h-full
+                    w-full
+                    z-20
+                  "
+                  checked
+                />
+                <span
+                  class="
+                    absolute
+                    flex
+                    items-center
+                    justify-center
+                    w-6
+                    h-6
+                    border
+                    bg-white
+                    dark:bg-slate-700 dark:border-slate-600
+                    rounded-full
+                    shadow
+                    -left-1
+                    top-1/2
+                    -translate-y-1/2
+                    transition
+                    peer-checked:-translate-y-1/2 peer-checked:translate-x-full
+                  "
+                ></span>
+                <span
+                  class="
+                    block
+                    w-10
+                    h-4
+                    bg-slate-300
+                    dark:bg-slate-600
+                    rounded-full
+                    shadow-inner
+                    peer-checked:bg-violet-400
+                    peer-focus:ring-0
+                    outline-1 outline-transparent
+                    peer-focus:outline-dashed peer-focus:outline-gray-300
+                    dark:peer-focus:outline-gray-600
+                    peer-focus:outline-offset-2
+                    transition-all
+                    duration-300
+                  "
+                ></span>
+              </span>
+              <div>
+                <h3 class="font-heading text-xs text-muted-400">Payments</h3>
+                <span>Payment requests</span>
+              </div>
+            </label>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Balance-->
+  <div class="grid md:grid-cols-12 gap-8">
+    <!--Column-->
+    <div class="md:col-span-4">
+      <h3
+        class="font-heading font-medium mb-1 text-muted-800 dark:text-muted-100"
+      >
+        Low balance
+      </h3>
+      <p class="font-heading text-sm text-muted-500 dark:text-muted-400">
+        We’ll email you when the balance on one of your accounts drops below the
+        amount you set in your account.
+      </p>
+    </div>
+    <!--Column-->
+    <div class="md:col-span-8">
+      <h3
+        class="
+          font-heading
+          text-xs
+          pb-4
+          px-4
+          border-b border-muted-200
+          dark:border-muted-800
+          text-muted-800
+          dark:text-muted-100
+        "
+      >
+        Low balance
+      </h3>
+      <div
+        class="flex flex-col divide-y divide-muted-200 dark:divide-muted-800"
+      >
+        <!--Item-->
+        <div class="group">
+          <a
+            href="#"
+            class="
+              flex
+              items-center
+              gap-4
+              font-heading
+              text-sm
+              p-4
+              text-muted-600
+              dark:text-muted-400
+              hover:bg-muted-100
+              dark:hover:bg-muted-800
+              transition-colors
+              duration-300
+            "
+          >
+            <label
+              for="switch-thin-6"
+              class="flex items-center gap-4 cursor-pointer"
+            >
+              <span class="block relative h-4">
+                <input
+                  id="switch-thin-6"
+                  type="checkbox"
+                  class="
+                    peer
+                    cursor-pointer
+                    opacity-0
+                    absolute
+                    h-full
+                    w-full
+                    z-20
+                  "
+                  checked
+                />
+                <span
+                  class="
+                    absolute
+                    flex
+                    items-center
+                    justify-center
+                    w-6
+                    h-6
+                    border
+                    bg-white
+                    dark:bg-slate-700 dark:border-slate-600
+                    rounded-full
+                    shadow
+                    -left-1
+                    top-1/2
+                    -translate-y-1/2
+                    transition
+                    peer-checked:-translate-y-1/2 peer-checked:translate-x-full
+                  "
+                ></span>
+                <span
+                  class="
+                    block
+                    w-10
+                    h-4
+                    bg-slate-300
+                    dark:bg-slate-600
+                    rounded-full
+                    shadow-inner
+                    peer-checked:bg-violet-400
+                    peer-focus:ring-0
+                    outline-1 outline-transparent
+                    peer-focus:outline-dashed peer-focus:outline-gray-300
+                    dark:peer-focus:outline-gray-600
+                    peer-focus:outline-offset-2
+                    transition-all
+                    duration-300
+                  "
+                ></span>
+              </span>
+              <div>
+                <h3 class="font-heading text-xs text-muted-400">Low alert</h3>
+                <span>Balance drops under $200.00</span>
+              </div>
+            </label>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Updates-->
+  <div class="grid md:grid-cols-12 gap-8">
+    <!--Column-->
+    <div class="md:col-span-4">
+      <h3
+        class="font-heading font-medium mb-1 text-muted-800 dark:text-muted-100"
+      >
+        Apollo updates
+      </h3>
+      <p class="font-heading text-sm text-muted-500 dark:text-muted-400">
+        Stay up to date on cool new product features or events you might be
+        interested in.
+      </p>
+    </div>
+    <!--Column-->
+    <div class="md:col-span-8">
+      <h3
+        class="
+          font-heading
+          text-xs
+          pb-4
+          px-4
+          border-b border-muted-200
+          dark:border-muted-800
+          text-muted-800
+          dark:text-muted-100
+        "
+      >
+        Updates
+      </h3>
+      <div
+        class="flex flex-col divide-y divide-muted-200 dark:divide-muted-800"
+      >
+        <!--Item-->
+        <div class="group">
+          <a
+            href="#"
+            class="
+              flex
+              items-center
+              gap-4
+              font-heading
+              text-sm
+              p-4
+              text-muted-600
+              dark:text-muted-400
+              hover:bg-muted-100
+              dark:hover:bg-muted-800
+              transition-colors
+              duration-300
+            "
+          >
+            <label
+              for="switch-thin-7"
+              class="flex items-center gap-4 cursor-pointer"
+            >
+              <span class="block relative h-4">
+                <input
+                  id="switch-thin-7"
+                  type="checkbox"
+                  class="
+                    peer
+                    cursor-pointer
+                    opacity-0
+                    absolute
+                    h-full
+                    w-full
+                    z-20
+                  "
+                  checked
+                />
+                <span
+                  class="
+                    absolute
+                    flex
+                    items-center
+                    justify-center
+                    w-6
+                    h-6
+                    border
+                    bg-white
+                    dark:bg-slate-700 dark:border-slate-600
+                    rounded-full
+                    shadow
+                    -left-1
+                    top-1/2
+                    -translate-y-1/2
+                    transition
+                    peer-checked:-translate-y-1/2 peer-checked:translate-x-full
+                  "
+                ></span>
+                <span
+                  class="
+                    block
+                    w-10
+                    h-4
+                    bg-slate-300
+                    dark:bg-slate-600
+                    rounded-full
+                    shadow-inner
+                    peer-checked:bg-violet-400
+                    peer-focus:ring-0
+                    outline-1 outline-transparent
+                    peer-focus:outline-dashed peer-focus:outline-gray-300
+                    dark:peer-focus:outline-gray-600
+                    peer-focus:outline-offset-2
+                    transition-all
+                    duration-300
+                  "
+                ></span>
+              </span>
+              <div>
+                <h3 class="font-heading text-xs text-muted-400">Features</h3>
+                <span>New feature</span>
+              </div>
+            </label>
+          </a>
+        </div>
+        <!--Item-->
+        <div class="group">
+          <a
+            href="#"
+            class="
+              flex
+              items-center
+              gap-4
+              font-heading
+              text-sm
+              p-4
+              text-muted-600
+              dark:text-muted-400
+              hover:bg-muted-100
+              dark:hover:bg-muted-800
+              transition-colors
+              duration-300
+            "
+          >
+            <label
+              for="switch-thin-8"
+              class="flex items-center gap-4 cursor-pointer"
+            >
+              <span class="block relative h-4">
+                <input
+                  id="switch-thin-8"
+                  type="checkbox"
+                  class="
+                    peer
+                    cursor-pointer
+                    opacity-0
+                    absolute
+                    h-full
+                    w-full
+                    z-20
+                  "
+                  checked
+                />
+                <span
+                  class="
+                    absolute
+                    flex
+                    items-center
+                    justify-center
+                    w-6
+                    h-6
+                    border
+                    bg-white
+                    dark:bg-slate-700 dark:border-slate-600
+                    rounded-full
+                    shadow
+                    -left-1
+                    top-1/2
+                    -translate-y-1/2
+                    transition
+                    peer-checked:-translate-y-1/2 peer-checked:translate-x-full
+                  "
+                ></span>
+                <span
+                  class="
+                    block
+                    w-10
+                    h-4
+                    bg-slate-300
+                    dark:bg-slate-600
+                    rounded-full
+                    shadow-inner
+                    peer-checked:bg-violet-400
+                    peer-focus:ring-0
+                    outline-1 outline-transparent
+                    peer-focus:outline-dashed peer-focus:outline-gray-300
+                    dark:peer-focus:outline-gray-600
+                    peer-focus:outline-offset-2
+                    transition-all
+                    duration-300
+                  "
+                ></span>
+              </span>
+              <div>
+                <h3 class="font-heading text-xs text-muted-400">Offers</h3>
+                <span>Special offers</span>
+              </div>
+            </label>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

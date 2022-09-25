@@ -1,0 +1,66 @@
+<div x-cloak class="absolute top-0 left-0 w-full">
+  <div class="w-full max-w-6xl mx-auto px-4">
+    <div class="w-full flex items-center justify-between py-5">
+      <div class="flex-1 flex items-center">
+        <a href="/home.html" class="flex items-center gap-2">
+          <img
+            src="/img/logo/logo-square-outline.svg"
+            class="w-8 h-8 dark:invert"
+            alt="App logo"
+            width="48"
+            height="48"
+          />
+          <img
+            src="/img/logo/text.svg"
+            class="hidden md:block w-24 dark:invert"
+            :class="$store.app.isLayoutCompact ? 'hidden' : 'block'"
+            alt="App logo"
+            width=""
+            height=""
+          />
+        </a>
+      </div>
+      <div class="grow">
+        <div class="w-full flex items-center justify-center">
+          <p class="font-heading text-muted-700 dark:text-muted-200">
+            Settings
+          </p>
+        </div>
+      </div>
+      <div class="flex-1">
+        <div class="flex items-center justify-end">
+          <button
+            type="button"
+            class="group text-center"
+            onclick="window.history.go(-1); return false;"
+          >
+            <i
+              class="
+                iconify
+                w-8
+                h-8
+                text-muted-800
+                dark:text-muted-500 dark:group-hover:text-muted-200
+                transition-colors
+                duration-300
+              "
+              data-icon="lucide:x"
+            ></i>
+            <span
+              class="
+                block
+                font-heading
+                text-xs text-muted-400
+                dark:text-muted-400 dark:group-hover:text-muted-200
+                transition-colors
+                duration-300
+              "
+            >
+              Back
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

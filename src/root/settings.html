@@ -1,0 +1,36 @@
+<!--Start Layout-->
+{{#> minimal }}
+
+<!--Nav-->
+{{> page/settings/settings-navigation}}
+
+<!--Content-->
+<div class="w-full pt-32 pb-20">
+  <div x-data="tabs()" class="w-full max-w-6xl mx-auto px-4">
+    <div class="w-full grid md:grid-cols-12 gap-8 md:gap-16">
+      <!--Stepper column-->
+      <div class="md:col-span-3 lg:col-span-3">
+        <!--Tabs-->
+        {{> page/settings/settings-tabs}}
+      </div>
+
+      <!--Steps column-->
+      <div class="md:col-span-9 lg:col-span-9">
+        <!--Tab 1-->
+        {{> page/settings/settings-tab-1}}
+
+        <!--Tab 2-->
+        {{> page/settings/settings-tab-2}}
+
+        <!--Tab 3-->
+        {{> page/settings/settings-tab-3}}
+
+        <!--Tab 4-->
+        {{> page/settings/settings-tab-4}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--End Layout-->
+{{/minimal}}
