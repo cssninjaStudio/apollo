@@ -1,0 +1,32 @@
+<!--Start Layout-->
+{{#> minimal }}
+
+<!--Nav-->
+{{> page/cards-create/cards-create-navigation}}
+
+<!--Content-->
+<div x-data="createCard()" class="w-full pt-32 pb-20">
+  <div class="w-full max-w-5xl mx-auto px-4">
+    <!--Form-->
+    <div x-show="!isComplete">
+      <div class="w-full grid md:grid-cols-12 gap-8 ltablet:gap-16 lg:gap-16">
+        <!--Content column-->
+        <div class="md:col-span-7 lg:col-span-7">
+          {{> page/cards-create/card-form}}
+        </div>
+
+        <!--Card column-->
+        <div class="relative md:col-span-5 lg:col-span-5">
+          <!--Tabs-->
+          <div class="sticky top-20">{{> page/cards-create/card-mockup}}</div>
+        </div>
+      </div>
+    </div>
+
+    <!--Success section-->
+    <div x-show="isComplete">{{> page/cards-create/card-create-success}}</div>
+  </div>
+</div>
+
+<!--End Layout-->
+{{/minimal}}

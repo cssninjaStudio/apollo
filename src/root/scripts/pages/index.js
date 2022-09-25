@@ -5,6 +5,7 @@ import { cards } from './cards'
 import { accounts } from './accounts'
 import { sendPayment } from './payments-send'
 import { receivePayment } from './payments-receive'
+import { createCard } from './cards-create'
 
 window.dashboard = dashboard
 window.transactions = transactions
@@ -13,3 +14,4 @@ window.cards = cards
 window.accounts = accounts
 window.sendPayment = sendPayment
 window.receivePayment = receivePayment
+window.createCard = createCard

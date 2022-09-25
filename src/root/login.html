@@ -1,0 +1,180 @@
+<!--Start Layout-->
+{{#> minimal }}
+
+<div
+  class="
+    w-full
+    h-screen
+    bg-gradient-to-r
+    from-primary-500
+    via-primary-700
+    to-primary-900
+  "
+>
+  <!--Topbar-->
+  <div class="w-full py-8 px-6">
+    <div class="w-full max-w-6xl mx-auto">
+      <div class="w-full flex items-center justify-between">
+        <a href="/login.html" class="flex items-center gap-2">
+          <img
+            src="/img/logo/logo-square-outline-white.svg"
+            class="w-10 h-10"
+            alt="App logo"
+            width="48"
+            height="48"
+          />
+          <img
+            src="/img/logo/text.svg"
+            class="w-28 invert hidden md:block"
+            alt="App logo"
+            width=""
+            height=""
+          />
+        </a>
+        <a href="/signup.html" class="group flex items-center gap-2 text-white">
+          <span class="font-heading">Open Account</span>
+          <i
+            class="
+              iconify
+              w-5
+              h-5
+              group-hover:translate-x-1
+              transition-transform
+              duration-300
+            "
+            data-icon="lucide:arrow-right"
+          ></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!--Form-->
+  <div class="w-full max-w-sm mx-auto pt-20 px-6">
+    <h2 class="font-heading text-4xl text-white mb-6">Sign In</h2>
+    <form class="space-y-4">
+      <!--Field-->
+      <div class="group relative">
+        <input
+          type="text"
+          class="
+            p-4
+            pl-12
+            py-2
+            h-12
+            text-base
+            leading-5
+            font-sans
+            w-full
+            rounded-md
+            border-2
+            bg-transparent
+            border-white
+            text-white
+            placeholder:text-white/50
+            tw-accessibility
+            transition-all
+            duration-300
+          "
+          placeholder="Email address"
+        />
+        <div
+          class="
+            absolute
+            top-0
+            left-0
+            h-12
+            w-12
+            flex
+            justify-center
+            items-center
+            text-white/50
+            group-focus-within:text-white
+            transition-colors
+            duration-300
+            cursor-pointer
+          "
+        >
+          <i class="iconify w-5 h-5" data-icon="lucide:mail"></i>
+        </div>
+      </div>
+      <!--Field-->
+      <div class="group relative">
+        <input
+          type="password"
+          class="
+            p-4
+            pl-12
+            py-2
+            h-12
+            text-base
+            leading-5
+            font-sans
+            w-full
+            rounded-md
+            border-2
+            bg-transparent
+            border-white
+            text-white
+            placeholder:text-white/50
+            tw-accessibility
+            transition-all
+            duration-300
+          "
+          placeholder="Password"
+        />
+        <div
+          class="
+            absolute
+            top-0
+            left-0
+            h-12
+            w-12
+            flex
+            justify-center
+            items-center
+            text-white/50
+            group-focus-within:text-white
+            transition-colors
+            duration-300
+            cursor-pointer
+          "
+        >
+          <i class="iconify w-5 h-5" data-icon="lucide:lock"></i>
+        </div>
+      </div>
+      <!--Field-->
+      <div>
+        <a href="/forgot.html" class="group flex justify-end text-white">
+          <span class="font-heading text-sm">Forgot password?</span>
+        </a>
+      </div>
+      <!--Field-->
+      <div>
+        <button
+          class="
+            w-full
+            h-12
+            inline-flex
+            justify-center
+            items-center
+            rounded-md
+            px-4
+            py-2
+            font-heading
+            text-white text-sm
+            bg-primary-500
+            hover:bg-primary-600
+            transition-colors
+            duration-300
+          "
+        >
+          Login to Account
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!--End Layout-->
+{{/minimal}}
