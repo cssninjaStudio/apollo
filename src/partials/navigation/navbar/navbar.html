@@ -2,6 +2,7 @@
   <div class="flex items-center gap-4 grow max-w-md">
     <!--Expand sidebar button-->
     <button
+      type="button"
       class="
         items-center
         justify-center
@@ -24,6 +25,7 @@
 
     <!--Mobile menu-->
     <button
+      type="button"
       class="
         flex
         lg:hidden
@@ -47,83 +49,87 @@
     <!--Search-->
     <div
       x-data="search()"
-      class="group hidden md:block relative w-full rounded-md shadow-sm"
+      class="hidden md:block relative w-full rounded-md shadow-sm"
     >
-      <input
-        id="navbar-search-field"
-        x-model="searchTerms"
-        x-on:keyup="searchData()"
-        class="
-          w-full
-          h-10
-          bg-muted-100
-          dark:bg-muted-1000
-          rounded-lg
-          border border-transparent
-          focus:border-muted-200
-          dark:border-muted-800 dark:focus:border-muted-700
-          focus:bg-white
-          dark:focus:bg-muted-900
-          focus:shadow-xl focus:shadow-muted-400/10
-          dark:focus:shadow-muted-800/10
-          placeholder:text-muted-300
-          dark:placeholder:text-muted-700
-          text-base text-muted-600
-          dark:text-muted-200
-          pl-10
-          pr-4
-          py-2
-          transition-all
-          duration-300
-          tw-accessibility
-        "
-        placeholder="Search for anything..."
-        type="text"
-      />
-      <button
-        type="button"
-        class="
-          absolute
-          top-0
-          left-0
-          h-10
-          w-10
-          flex
-          justify-center
-          items-center
-          text-muted-400
-          dark:text-muted-600
-          group-focus-within:text-primary-500
-          transition-colors
-          duration-300
-          cursor-pointer
-        "
-      >
-        <i class="iconify w-4 h-4" data-icon="lucide:search"></i>
-      </button>
-      <!--Empty button-->
-      <button
-        class="
-          absolute
-          top-0
-          right-0
-          h-10
-          w-10
-          flex
-          justify-center
-          items-center
-          text-muted-400
-          hover:text-muted-700
-          dark:hover:text-muted-100
-          transition-colors
-          duration-300
-          cursor-pointer
-        "
-        :class="searchTerms === '' ? 'hidden' : 'block'"
-        @click="closeSearch()"
-      >
-        <i class="iconify w-4 h-4" data-icon="lucide:x"></i>
-      </button>
+      <!--Input-->
+      <div class="relative group">
+        <input
+          id="navbar-search-field"
+          x-model="searchTerms"
+          x-on:keyup="searchData()"
+          class="
+            w-full
+            h-10
+            bg-muted-100
+            dark:bg-muted-1000
+            rounded-lg
+            border border-transparent
+            focus:border-muted-200
+            dark:border-muted-800 dark:focus:border-muted-700
+            focus:bg-white
+            dark:focus:bg-muted-900
+            focus:shadow-xl focus:shadow-muted-400/10
+            dark:focus:shadow-muted-800/10
+            placeholder:text-muted-300
+            dark:placeholder:text-muted-700
+            text-base text-muted-600
+            dark:text-muted-200
+            pl-10
+            pr-4
+            py-2
+            transition-all
+            duration-300
+            tw-accessibility
+          "
+          placeholder="Search for anything..."
+          type="text"
+        />
+        <button
+          type="button"
+          class="
+            absolute
+            top-0
+            left-0
+            h-10
+            w-10
+            flex
+            justify-center
+            items-center
+            text-muted-400
+            dark:text-muted-600
+            group-focus-within:text-primary-500
+            transition-colors
+            duration-300
+            cursor-pointer
+          "
+        >
+          <i class="iconify w-4 h-4" data-icon="lucide:search"></i>
+        </button>
+        <!--Empty button-->
+        <button
+          type="button"
+          class="
+            absolute
+            top-0
+            right-0
+            h-10
+            w-10
+            flex
+            justify-center
+            items-center
+            text-muted-400
+            hover:text-muted-700
+            dark:hover:text-muted-100
+            transition-colors
+            duration-300
+            cursor-pointer
+          "
+          :class="searchTerms === '' ? 'hidden' : 'block'"
+          @click="closeSearch()"
+        >
+          <i class="iconify w-4 h-4" data-icon="lucide:x"></i>
+        </button>
+      </div>
 
       <!--Results-->
       {{> navigation/navbar/navbar-search-results}}
@@ -139,6 +145,7 @@
 
     <!--Panel button-->
     <button
+      type="button"
       class="
         h-10
         w-10

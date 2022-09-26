@@ -1,58 +1,38 @@
 [
   {
-    "type": "question",
-    "title": "How can I edit my profile?",
-    "content": "Asked by Sara M.",
-    "photoUrl": "/img/avatars/14.jpg",
-    "url": "/home.html",
-    "icon": "ph:heartbeat-duotone"
+    "title": "New card",
+    "content": "Need a card? Create one",
+    "url": "/cards-create.html",
+    "icon": "ph:credit-card-duotone"
   },
   {
-    "type": "article",
-    "title": "Prepare a backup strategy",
-    "content": "Written by Elisabeth C.",
-    "photoUrl": "/img/icons/icon1.svg",
-    "url": "/home.html",
-    "icon": "ph:heartbeat-duotone"
+    "title": "Accounts",
+    "content": "Manage your accounts",
+    "url": "/accounts.html",
+    "icon": "ph:grid-four-duotone"
   },
   {
-    "type": "question",
-    "title": "Role settings do not work properly",
-    "content": "Asked by Anthony G.",
-    "photoUrl": "/img/avatars/33.jpg",
-    "url": "/home.html",
-    "icon": "ph:heartbeat-duotone"
+    "title": "Transactions",
+    "content": "View transaction history",
+    "url": "/transactions.html",
+    "icon": "ph:arrows-left-right-duotone"
   },
   {
-    "type": "article",
-    "title": "User management",
-    "content": "Written by Support Team",
-    "photoUrl": "/img/icons/icon2.svg",
-    "url": "/home.html",
-    "icon": "ph:heartbeat-duotone"
+    "title": "Credit request",
+    "content": "Ask for funding",
+    "url": "/credit.html",
+    "icon": "ph:infinity-duotone"
   },
   {
-    "type": "question",
-    "title": "Can I upload multiple images?",
-    "content": "Asked by Sally L.",
-    "photoUrl": "/img/avatars/30.jpg",
-    "url": "/home.html",
-    "icon": "ph:heartbeat-duotone"
+    "title": "New payment",
+    "content": "Create a payment request",
+    "url": "/payments-send.html",
+    "icon": "ph:envelope-duotone"
   },
   {
-    "type": "article",
-    "title": "Work with deals",
-    "content": "Written by Support Team",
-    "photoUrl": "/img/icons/icon2.svg",
+    "title": "Settings",
+    "content": "manage your preferences",
     "url": "/home.html",
-    "icon": "ph:heartbeat-duotone"
-  },
-  {
-    "type": "article",
-    "title": "Configure the system",
-    "content": "Written by Support Team",
-    "photoUrl": "/img/icons/icon1.svg",
-    "url": "/home.html",
-    "icon": "ph:heartbeat-duotone"
+    "icon": "ph:gear-duotone"
   }
 ]
