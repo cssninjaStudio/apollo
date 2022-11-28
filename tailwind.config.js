@@ -40,7 +40,10 @@ module.exports = {
         stone: {
           1000: '#0f0d0c',
         },
-        muted: colors.slate,
+        muted: {
+          ...colors.slate,
+          1000: '#0a101f',
+        },
         primary: colors.violet,
         info: colors.sky,
         success: colors.teal,
