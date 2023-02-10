@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/cssninjaStudio/apollo/compare/v1.0.0...v1.1.0) (2023-02-10)
+
+
+### Features
+
+* update dependencies ([e436205](https://github.com/cssninjaStudio/apollo/commit/e436205b7c3ab32db1b1dd63d900e96cf2143e6b))
+
 ## 1.0.0 (2022-11-28)
 
 
