@@ -20,7 +20,7 @@
       :class="$store.app.isLayoutCompact ? 'lg:flex' : 'hidden'"
       @click="$store.app.isLayoutCompact = false"
     >
-      <i class="iconify w-5 h-5" data-icon="ph:dots-nine-duotone"></i>
+      <iconify-icon class="iconify w-5 h-5 flex items-center justify-center text-lg" icon="ph:dots-nine-duotone"></iconify-icon>
     </button>
 
     <!--Mobile menu-->
@@ -44,7 +44,7 @@
       "
       @click="$store.app.isMobileOpen = true"
     >
-      <i class="iconify w-5 h-5" data-icon="ph:dots-nine-duotone"></i>
+      <iconify-icon class="iconify w-5 h-5 flex items-center justify-center text-lg" icon="ph:dots-nine-duotone"></iconify-icon>
     </button>
     <!--Search-->
     <div
@@ -103,7 +103,7 @@
             cursor-pointer
           "
         >
-          <i class="iconify w-4 h-4" data-icon="lucide:search"></i>
+          <iconify-icon class="iconify w-4 h-4" icon="lucide:search"></iconify-icon>
         </button>
         <!--Empty button-->
         <button
@@ -127,7 +127,7 @@
           :class="searchTerms === '' ? 'hidden' : 'block'"
           @click="closeSearch()"
         >
-          <i class="iconify w-4 h-4" data-icon="lucide:x"></i>
+          <iconify-icon class="iconify w-4 h-4" icon="lucide:x"></iconify-icon>
         </button>
       </div>
 
@@ -170,7 +170,7 @@
       "
       @click="$store.app.isPanelOpen = true"
     >
-      <i class="iconify w-5 h-5" data-icon="fluent:flash-28-filled"></i>
+      <iconify-icon class="iconify w-5 h-5 flex items-center justify-center text-lg" icon="fluent:flash-28-filled"></iconify-icon>
     </button>
   </div>
 </div>

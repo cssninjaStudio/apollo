@@ -8,6 +8,7 @@ import intersect from '@alpinejs/intersect'
 import collapse from '@alpinejs/collapse'
 import persist from '@alpinejs/persist'
 import Tooltip from '@ryangjchandler/alpine-tooltip'
+import 'iconify-icon'
 
 import './demo'
 import './components'

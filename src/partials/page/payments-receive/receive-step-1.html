@@ -1,14 +1,7 @@
 <!--Step 1-->
 <div x-show="currentStep === 0" class="w-full">
   <h2
-    class="
-      font-heading
-      text-2xl
-      md:text-3xl
-      text-muted-800
-      dark:text-white
-      mb-8
-    "
+    class="font-heading text-2xl md:text-3xl text-muted-800 dark:text-white mb-8"
   >
     Select a transfer method
   </h2>
@@ -18,208 +11,85 @@
       <!--Item-->
       <button
         type="button"
-        class="
-          group
-          w-full
-          flex
-          items-center
-          py-4
-          px-6
-          bg-white
-          dark:bg-muted-1000
-          border-2 border-muted-200
-          dark:border-muted-800
-          hover:border-primary-500
-          dark:hover:border-primary-500
-          hover:shadow-xl hover:shadow-muted-400/10
-          dark:shadow-muted-800/10
-          hover:-translate-x-0.5
-          rounded-xl
-          cursor-pointer
-          transition-all
-          duration-300
-          tw-accessibility
-        "
+        class="group w-full flex items-center py-4 px-6 bg-white dark:bg-muted-1000 border-2 border-muted-200 dark:border-muted-800 hover:border-primary-500 dark:hover:border-primary-500 hover:shadow-xl hover:shadow-muted-400/10 dark:shadow-muted-800/10 hover:-translate-x-0.5 rounded-xl cursor-pointer transition-all duration-300 tw-accessibility"
         @click="nextStep(), paymentMethod = 'transfer'"
       >
         <span
-          class="
-            flex
-            items-center
-            justify-center
-            w-12
-            h-12
-            text-muted-600
-            dark:text-muted-400
-            bg-muted-100
-            dark:bg-muted-900
-            group-hover:bg-primary-500
-            group-hover:text-white
-            group-hover:rotate-180
-            rounded-full
-            transition-all
-            duration-300
-          "
+          class="flex items-center justify-center w-12 h-12 text-muted-600 dark:text-muted-400 bg-muted-100 dark:bg-muted-900 group-hover:bg-primary-500 group-hover:text-white group-hover:rotate-180 rounded-full transition-all duration-300"
         >
-          <i
-            class="iconify w-6 h-6"
-            data-icon="ph:arrows-left-right-duotone"
-          ></i>
+          <iconify-icon
+            class="iconify w-6 h-6 flex items-center justify-center text-2xl"
+            icon="ph:arrows-left-right-duotone"
+          ></iconify-icon>
         </span>
         <span class="flex flex-col ml-6">
           <span
-            class="
-              font-heading
-              text-base
-              font-medium
-              text-muted-800
-              dark:text-muted-100
-            "
+            class="font-heading text-base font-medium text-muted-800 dark:text-muted-100"
           >
             Bank transfer
           </span>
         </span>
         <span class="flex flex-col ml-auto">
-          <i
-            class="iconify w-5 h-5 text-muted-400"
-            data-icon="lucide:arrow-right"
-          ></i>
+          <iconify-icon
+            class="iconify w-5 h-5 flex items-center justify-center text-xl text-muted-400"
+            icon="lucide:arrow-right"
+          ></iconify-icon>
         </span>
       </button>
       <!--Item-->
       <button
         type="button"
-        class="
-          group
-          w-full
-          flex
-          items-center
-          py-4
-          px-6
-          bg-white
-          dark:bg-muted-1000
-          border-2 border-muted-200
-          dark:border-muted-800
-          hover:border-primary-500
-          dark:hover:border-primary-500
-          hover:shadow-xl hover:shadow-muted-400/10
-          dark:shadow-muted-800/10
-          hover:-translate-x-0.5
-          rounded-xl
-          cursor-pointer
-          transition-all
-          duration-300
-          tw-accessibility
-        "
+        class="group w-full flex items-center py-4 px-6 bg-white dark:bg-muted-1000 border-2 border-muted-200 dark:border-muted-800 hover:border-primary-500 dark:hover:border-primary-500 hover:shadow-xl hover:shadow-muted-400/10 dark:shadow-muted-800/10 hover:-translate-x-0.5 rounded-xl cursor-pointer transition-all duration-300 tw-accessibility"
         @click="nextStep(), paymentMethod = 'link'"
       >
         <span
-          class="
-            flex
-            items-center
-            justify-center
-            w-12
-            h-12
-            text-muted-600
-            dark:text-muted-400
-            bg-muted-100
-            dark:bg-muted-900
-            group-hover:bg-primary-500
-            group-hover:text-white
-            group-hover:rotate-180
-            rounded-full
-            transition-all
-            duration-300
-          "
+          class="flex items-center justify-center w-12 h-12 text-muted-600 dark:text-muted-400 bg-muted-100 dark:bg-muted-900 group-hover:bg-primary-500 group-hover:text-white group-hover:rotate-180 rounded-full transition-all duration-300"
         >
-          <i class="iconify w-6 h-6" data-icon="ph:link-duotone"></i>
+          <iconify-icon
+            class="iconify w-6 h-6 flex items-center justify-center text-2xl"
+            icon="ph:link-duotone"
+          ></iconify-icon>
         </span>
         <span class="flex flex-col ml-6">
           <span
-            class="
-              font-heading
-              text-base
-              font-medium
-              text-muted-800
-              dark:text-muted-100
-            "
+            class="font-heading text-base font-medium text-muted-800 dark:text-muted-100"
           >
             Payment link
           </span>
         </span>
         <span class="flex flex-col ml-auto">
-          <i
-            class="iconify w-5 h-5 text-muted-400"
-            data-icon="lucide:arrow-right"
-          ></i>
+          <iconify-icon
+            class="iconify w-5 h-5 flex items-center justify-center text-xl text-muted-400"
+            icon="lucide:arrow-right"
+          ></iconify-icon>
         </span>
       </button>
       <!--Item-->
       <button
         type="button"
-        class="
-          group
-          w-full
-          flex
-          items-center
-          py-4
-          px-6
-          bg-white
-          dark:bg-muted-1000
-          border-2 border-muted-200
-          dark:border-muted-800
-          hover:border-primary-500
-          dark:hover:border-primary-500
-          hover:shadow-xl hover:shadow-muted-400/10
-          dark:shadow-muted-800/10
-          hover:-translate-x-0.5
-          rounded-xl
-          cursor-pointer
-          transition-all
-          duration-300
-          tw-accessibility
-        "
+        class="group w-full flex items-center py-4 px-6 bg-white dark:bg-muted-1000 border-2 border-muted-200 dark:border-muted-800 hover:border-primary-500 dark:hover:border-primary-500 hover:shadow-xl hover:shadow-muted-400/10 dark:shadow-muted-800/10 hover:-translate-x-0.5 rounded-xl cursor-pointer transition-all duration-300 tw-accessibility"
         @click="nextStep(), paymentMethod = 'wire'"
       >
         <span
-          class="
-            flex
-            items-center
-            justify-center
-            w-12
-            h-12
-            text-muted-600
-            dark:text-muted-400
-            bg-muted-100
-            dark:bg-muted-900
-            group-hover:bg-primary-500
-            group-hover:text-white
-            group-hover:rotate-180
-            rounded-full
-            transition-all
-            duration-300
-          "
+          class="flex items-center justify-center w-12 h-12 text-muted-600 dark:text-muted-400 bg-muted-100 dark:bg-muted-900 group-hover:bg-primary-500 group-hover:text-white group-hover:rotate-180 rounded-full transition-all duration-300"
         >
-          <i class="iconify w-6 h-6" data-icon="ph:note-duotone"></i>
+          <iconify-icon
+            class="iconify w-6 h-6 flex items-center justify-center text-2xl"
+            icon="ph:note-duotone"
+          ></iconify-icon>
         </span>
         <span class="flex flex-col ml-6">
           <span
-            class="
-              font-heading
-              text-base
-              font-medium
-              text-muted-800
-              dark:text-muted-100
-            "
+            class="font-heading text-base font-medium text-muted-800 dark:text-muted-100"
           >
             Wire
           </span>
         </span>
         <span class="flex flex-col ml-auto">
-          <i
-            class="iconify w-5 h-5 text-muted-400"
-            data-icon="lucide:arrow-right"
-          ></i>
+          <iconify-icon
+            class="iconify w-5 h-5 flex items-center justify-center text-xl text-muted-400"
+            icon="lucide:arrow-right"
+          ></iconify-icon>
         </span>
       </button>
     </div>

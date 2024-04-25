@@ -10,33 +10,13 @@
   </div>
   <!--Grid-->
   <div
-    class="
-      grid
-      ptablet:grid-cols-2
-      ltablet:grid-cols-3
-      lg:grid-cols-3
-      gap-3
-      p-6
-      rounded-xl
-      bg-muted-100
-      dark:bg-muted-800
-    "
+    class="grid ptablet:grid-cols-2 ltablet:grid-cols-3 lg:grid-cols-3 gap-3 p-6 rounded-xl bg-muted-100 dark:bg-muted-800"
   >
     <!--Grid item-->
     <div
       x-data="{ expanded: false }"
       @click.away="expanded = false"
-      class="
-        p-5
-        rounded-xl
-        border border-muted-200
-        bg-white
-        dark:bg-muted-1000 dark:border-muted-800
-        hover:shadow-xl hover:shadow-muted-400/10
-        dark:hover:shadow-muted-800/10
-        transition-all
-        duration-300
-      "
+      class="p-5 rounded-xl border border-muted-200 bg-white dark:bg-muted-1000 dark:border-muted-800 hover:shadow-xl hover:shadow-muted-400/10 dark:hover:shadow-muted-800/10 transition-all duration-300"
     >
       <!--Trigger-->
       <button
@@ -44,15 +24,13 @@
         class="w-full flex items-center gap-3 click-blur"
         @click="expanded = !expanded"
       >
-        <i class="iconify w-8 h-8" data-icon="logos:slack-icon"></i>
+        <iconify-icon
+          class="iconify w-8 h-8 flex items-center justify-center text-xl"
+          icon="logos:slack-icon"
+        ></iconify-icon>
         <span class="block text-left">
           <span
-            class="
-              block
-              font-heading font-medium
-              text-sm text-muted-800
-              dark:text-muted-200
-            "
+            class="block font-heading font-medium text-sm text-muted-800 dark:text-muted-200"
           >
             Slack
           </span>
@@ -60,19 +38,11 @@
             -12% on subscription
           </span>
         </span>
-        <i
-          class="
-            iconify
-            w-5
-            h-5
-            ml-auto
-            text-muted-400
-            transition-transform
-            duration-300
-          "
+        <iconify-icon
+          class="iconify w-5 h-5 flex items-center justify-center text-lg ml-auto text-muted-400 transition-transform duration-300"
           :class="expanded ? 'rotate-180' : ''"
-          data-icon="lucide:chevron-down"
-        ></i>
+          icon="lucide:chevron-down"
+        ></iconify-icon>
       </button>
       <div
         x-show="expanded"
@@ -81,26 +51,13 @@
       >
         <a
           href="#"
-          class="
-            flex
-            items-center
-            gap-1
-            font-heading font-medium
-            text-xs text-primary-500
-          "
+          class="flex items-center gap-1 font-heading font-medium text-xs text-primary-500"
         >
           <span>Get this offer</span>
-          <i
-            class="
-              iconify
-              w-4
-              h-4
-              group-hover:translate-x-1
-              transition-transform
-              duration-300
-            "
-            data-icon="lucide:arrow-right"
-          ></i>
+          <iconify-icon
+            class="iconify w-4 h-4 flex items-center justify-center text-base group-hover:translate-x-1 transition-transform duration-300"
+            icon="lucide:arrow-right"
+          ></iconify-icon>
         </a>
         <span class="font-heading text-xs text-muted-400">30 days left</span>
       </div>
@@ -109,17 +66,7 @@
     <div
       x-data="{ expanded: false }"
       @click.away="expanded = false"
-      class="
-        p-5
-        rounded-xl
-        border border-muted-200
-        bg-white
-        dark:bg-muted-1000 dark:border-muted-800
-        hover:shadow-xl hover:shadow-muted-400/10
-        dark:hover:shadow-muted-800/10
-        transition-all
-        duration-300
-      "
+      class="p-5 rounded-xl border border-muted-200 bg-white dark:bg-muted-1000 dark:border-muted-800 hover:shadow-xl hover:shadow-muted-400/10 dark:hover:shadow-muted-800/10 transition-all duration-300"
     >
       <!--Trigger-->
       <button
@@ -127,15 +74,13 @@
         class="w-full flex items-center gap-3 click-blur"
         @click="expanded = !expanded"
       >
-        <i class="iconify w-8 h-8" data-icon="logos:mattermost-icon"></i>
+        <iconify-icon
+          class="iconify w-8 h-8 flex items-center justify-center text-xl"
+          icon="logos:mattermost-icon"
+        ></iconify-icon>
         <span class="block text-left">
           <span
-            class="
-              block
-              font-heading font-medium
-              text-sm text-muted-800
-              dark:text-muted-200
-            "
+            class="block font-heading font-medium text-sm text-muted-800 dark:text-muted-200"
           >
             Mattermost
           </span>
@@ -143,19 +88,11 @@
             1 month free
           </span>
         </span>
-        <i
-          class="
-            iconify
-            w-5
-            h-5
-            ml-auto
-            text-muted-400
-            transition-transform
-            duration-300
-          "
+        <iconify-icon
+          class="iconify w-5 h-5 flex items-center justify-center text-lg ml-auto text-muted-400 transition-transform duration-300"
           :class="expanded ? 'rotate-180' : ''"
-          data-icon="lucide:chevron-down"
-        ></i>
+          icon="lucide:chevron-down"
+        ></iconify-icon>
       </button>
       <div
         x-show="expanded"
@@ -164,26 +101,13 @@
       >
         <a
           href="#"
-          class="
-            flex
-            items-center
-            gap-1
-            font-heading font-medium
-            text-xs text-primary-500
-          "
+          class="flex items-center gap-1 font-heading font-medium text-xs text-primary-500"
         >
           <span>Get this offer</span>
-          <i
-            class="
-              iconify
-              w-4
-              h-4
-              group-hover:translate-x-1
-              transition-transform
-              duration-300
-            "
-            data-icon="lucide:arrow-right"
-          ></i>
+          <iconify-icon
+            class="iconify w-4 h-4 flex items-center justify-center text-base group-hover:translate-x-1 transition-transform duration-300"
+            icon="lucide:arrow-right"
+          ></iconify-icon>
         </a>
         <span class="font-heading text-xs text-muted-400">15 days left</span>
       </div>
@@ -192,17 +116,7 @@
     <div
       x-data="{ expanded: false }"
       @click.away="expanded = false"
-      class="
-        p-5
-        rounded-xl
-        border border-muted-200
-        bg-white
-        dark:bg-muted-1000 dark:border-muted-800
-        hover:shadow-xl hover:shadow-muted-400/10
-        dark:hover:shadow-muted-800/10
-        transition-all
-        duration-300
-      "
+      class="p-5 rounded-xl border border-muted-200 bg-white dark:bg-muted-1000 dark:border-muted-800 hover:shadow-xl hover:shadow-muted-400/10 dark:hover:shadow-muted-800/10 transition-all duration-300"
     >
       <!--Trigger-->
       <button
@@ -210,15 +124,13 @@
         class="w-full flex items-center gap-3 click-blur"
         @click="expanded = !expanded"
       >
-        <i class="iconify w-8 h-8" data-icon="logos:microsoft-teams"></i>
+        <iconify-icon
+          class="iconify w-8 h-8 flex items-center justify-center text-xl"
+          icon="logos:microsoft-teams"
+        ></iconify-icon>
         <span class="block text-left">
           <span
-            class="
-              block
-              font-heading font-medium
-              text-sm text-muted-800
-              dark:text-muted-200
-            "
+            class="block font-heading font-medium text-sm text-muted-800 dark:text-muted-200"
           >
             Teams
           </span>
@@ -226,19 +138,11 @@
             -50% off now
           </span>
         </span>
-        <i
-          class="
-            iconify
-            w-5
-            h-5
-            ml-auto
-            text-muted-400
-            transition-transform
-            duration-300
-          "
+        <iconify-icon
+          class="iconify w-5 h-5 flex items-center justify-center text-lg ml-auto text-muted-400 transition-transform duration-300"
           :class="expanded ? 'rotate-180' : ''"
-          data-icon="lucide:chevron-down"
-        ></i>
+          icon="lucide:chevron-down"
+        ></iconify-icon>
       </button>
       <div
         x-show="expanded"
@@ -247,26 +151,13 @@
       >
         <a
           href="#"
-          class="
-            flex
-            items-center
-            gap-1
-            font-heading font-medium
-            text-xs text-primary-500
-          "
+          class="flex items-center gap-1 font-heading font-medium text-xs text-primary-500"
         >
           <span>Get this offer</span>
-          <i
-            class="
-              iconify
-              w-4
-              h-4
-              group-hover:translate-x-1
-              transition-transform
-              duration-300
-            "
-            data-icon="lucide:arrow-right"
-          ></i>
+          <iconify-icon
+            class="iconify w-4 h-4 flex items-center justify-center text-base group-hover:translate-x-1 transition-transform duration-300"
+            icon="lucide:arrow-right"
+          ></iconify-icon>
         </a>
         <span class="font-heading text-xs text-muted-400">25 days left</span>
       </div>
@@ -275,17 +166,7 @@
     <div
       x-data="{ expanded: false }"
       @click.away="expanded = false"
-      class="
-        p-5
-        rounded-xl
-        border border-muted-200
-        bg-white
-        dark:bg-muted-1000 dark:border-muted-800
-        hover:shadow-xl hover:shadow-muted-400/10
-        dark:hover:shadow-muted-800/10
-        transition-all
-        duration-300
-      "
+      class="p-5 rounded-xl border border-muted-200 bg-white dark:bg-muted-1000 dark:border-muted-800 hover:shadow-xl hover:shadow-muted-400/10 dark:hover:shadow-muted-800/10 transition-all duration-300"
     >
       <!--Trigger-->
       <button
@@ -293,15 +174,13 @@
         class="w-full flex items-center gap-3 click-blur"
         @click="expanded = !expanded"
       >
-        <i class="iconify w-8 h-8" data-icon="logos:intercom-icon"></i>
+        <iconify-icon
+          class="iconify w-8 h-8 flex items-center justify-center text-xl"
+          icon="logos:intercom-icon"
+        ></iconify-icon>
         <span class="block text-left">
           <span
-            class="
-              block
-              font-heading font-medium
-              text-sm text-muted-800
-              dark:text-muted-200
-            "
+            class="block font-heading font-medium text-sm text-muted-800 dark:text-muted-200"
           >
             Intercom
           </span>
@@ -309,19 +188,11 @@
             2 months free
           </span>
         </span>
-        <i
-          class="
-            iconify
-            w-5
-            h-5
-            ml-auto
-            text-muted-400
-            transition-transform
-            duration-300
-          "
+        <iconify-icon
+          class="iconify w-5 h-5 flex items-center justify-center text-lg ml-auto text-muted-400 transition-transform duration-300"
           :class="expanded ? 'rotate-180' : ''"
-          data-icon="lucide:chevron-down"
-        ></i>
+          icon="lucide:chevron-down"
+        ></iconify-icon>
       </button>
       <div
         x-show="expanded"
@@ -330,26 +201,13 @@
       >
         <a
           href="#"
-          class="
-            flex
-            items-center
-            gap-1
-            font-heading font-medium
-            text-xs text-primary-500
-          "
+          class="flex items-center gap-1 font-heading font-medium text-xs text-primary-500"
         >
           <span>Get this offer</span>
-          <i
-            class="
-              iconify
-              w-4
-              h-4
-              group-hover:translate-x-1
-              transition-transform
-              duration-300
-            "
-            data-icon="lucide:arrow-right"
-          ></i>
+          <iconify-icon
+            class="iconify w-4 h-4 flex items-center justify-center text-base group-hover:translate-x-1 transition-transform duration-300"
+            icon="lucide:arrow-right"
+          ></iconify-icon>
         </a>
         <span class="font-heading text-xs text-muted-400">5 days left</span>
       </div>
@@ -358,17 +216,7 @@
     <div
       x-data="{ expanded: false }"
       @click.away="expanded = false"
-      class="
-        p-5
-        rounded-xl
-        border border-muted-200
-        bg-white
-        dark:bg-muted-1000 dark:border-muted-800
-        hover:shadow-xl hover:shadow-muted-400/10
-        dark:hover:shadow-muted-800/10
-        transition-all
-        duration-300
-      "
+      class="p-5 rounded-xl border border-muted-200 bg-white dark:bg-muted-1000 dark:border-muted-800 hover:shadow-xl hover:shadow-muted-400/10 dark:hover:shadow-muted-800/10 transition-all duration-300"
     >
       <!--Trigger-->
       <button
@@ -376,15 +224,13 @@
         class="w-full flex items-center gap-3 click-blur"
         @click="expanded = !expanded"
       >
-        <i class="iconify w-8 h-8" data-icon="logos:google-meet"></i>
+        <iconify-icon
+          class="iconify w-8 h-8 flex items-center justify-center text-xl"
+          icon="logos:google-meet"
+        ></iconify-icon>
         <span class="block text-left">
           <span
-            class="
-              block
-              font-heading font-medium
-              text-sm text-muted-800
-              dark:text-muted-200
-            "
+            class="block font-heading font-medium text-sm text-muted-800 dark:text-muted-200"
           >
             Google Meet
           </span>
@@ -392,19 +238,11 @@
             -10% off now
           </span>
         </span>
-        <i
-          class="
-            iconify
-            w-5
-            h-5
-            ml-auto
-            text-muted-400
-            transition-transform
-            duration-300
-          "
+        <iconify-icon
+          class="iconify w-5 h-5 flex items-center justify-center text-lg ml-auto text-muted-400 transition-transform duration-300"
           :class="expanded ? 'rotate-180' : ''"
-          data-icon="lucide:chevron-down"
-        ></i>
+          icon="lucide:chevron-down"
+        ></iconify-icon>
       </button>
       <div
         x-show="expanded"
@@ -413,26 +251,13 @@
       >
         <a
           href="#"
-          class="
-            flex
-            items-center
-            gap-1
-            font-heading font-medium
-            text-xs text-primary-500
-          "
+          class="flex items-center gap-1 font-heading font-medium text-xs text-primary-500"
         >
           <span>Get this offer</span>
-          <i
-            class="
-              iconify
-              w-4
-              h-4
-              group-hover:translate-x-1
-              transition-transform
-              duration-300
-            "
-            data-icon="lucide:arrow-right"
-          ></i>
+          <iconify-icon
+            class="iconify w-4 h-4 flex items-center justify-center text-base group-hover:translate-x-1 transition-transform duration-300"
+            icon="lucide:arrow-right"
+          ></iconify-icon>
         </a>
         <span class="font-heading text-xs text-muted-400">2 days left</span>
       </div>
@@ -441,17 +266,7 @@
     <div
       x-data="{ expanded: false }"
       @click.away="expanded = false"
-      class="
-        p-5
-        rounded-xl
-        border border-muted-200
-        bg-white
-        dark:bg-muted-1000 dark:border-muted-800
-        hover:shadow-xl hover:shadow-muted-400/10
-        dark:hover:shadow-muted-800/10
-        transition-all
-        duration-300
-      "
+      class="p-5 rounded-xl border border-muted-200 bg-white dark:bg-muted-1000 dark:border-muted-800 hover:shadow-xl hover:shadow-muted-400/10 dark:hover:shadow-muted-800/10 transition-all duration-300"
     >
       <!--Trigger-->
       <button
@@ -459,15 +274,13 @@
         class="w-full flex items-center gap-3 click-blur"
         @click="expanded = !expanded"
       >
-        <i class="iconify w-8 h-8" data-icon="logos:hipchat"></i>
+        <iconify-icon
+          class="iconify w-8 h-8 flex items-center justify-center text-xl"
+          icon="logos:hipchat"
+        ></iconify-icon>
         <span class="block text-left">
           <span
-            class="
-              block
-              font-heading font-medium
-              text-sm text-muted-800
-              dark:text-muted-200
-            "
+            class="block font-heading font-medium text-sm text-muted-800 dark:text-muted-200"
           >
             Hipchat
           </span>
@@ -475,19 +288,11 @@
             -25% off all plans
           </span>
         </span>
-        <i
-          class="
-            iconify
-            w-5
-            h-5
-            ml-auto
-            text-muted-400
-            transition-transform
-            duration-300
-          "
+        <iconify-icon
+          class="iconify w-5 h-5 flex items-center justify-center text-lg ml-auto text-muted-400 transition-transform duration-300"
           :class="expanded ? 'rotate-180' : ''"
-          data-icon="lucide:chevron-down"
-        ></i>
+          icon="lucide:chevron-down"
+        ></iconify-icon>
       </button>
       <div
         x-show="expanded"
@@ -496,26 +301,13 @@
       >
         <a
           href="#"
-          class="
-            flex
-            items-center
-            gap-1
-            font-heading font-medium
-            text-xs text-primary-500
-          "
+          class="flex items-center gap-1 font-heading font-medium text-xs text-primary-500"
         >
           <span>Get this offer</span>
-          <i
-            class="
-              iconify
-              w-4
-              h-4
-              group-hover:translate-x-1
-              transition-transform
-              duration-300
-            "
-            data-icon="lucide:arrow-right"
-          ></i>
+          <iconify-icon
+            class="iconify w-4 h-4 flex items-center justify-center text-base group-hover:translate-x-1 transition-transform duration-300"
+            icon="lucide:arrow-right"
+          ></iconify-icon>
         </a>
         <span class="font-heading text-xs text-muted-400">30 days left</span>
       </div>

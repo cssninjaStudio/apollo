@@ -22,11 +22,11 @@
     @click="open()"
   >
     <span>Move Money</span>
-    <i
-      class="iconify w-4 h-4 transition-transform duration-300"
+    <iconify-icon
+      class="iconify w-4 h-4 flex items-center justify-center text-lg transition-transform duration-300"
       :class="isOpen ? 'rotate-180' : ''"
-      data-icon="lucide:chevron-down"
-    ></i>
+      icon="lucide:chevron-down"
+    ></iconify-icon>
   </button>
 
   <!--Dropdown menu-->
@@ -69,7 +69,7 @@
             duration-300
           "
         >
-          <i class="iconify w-5 h-5" data-icon="ph:arrow-right-duotone"></i>
+          <iconify-icon class="iconify w-5 h-5 flex items-center justify-center text-lg" icon="ph:arrow-right-duotone"></iconify-icon>
           <div class="font-sans">
             <h5
               class="text-sm font-semibold text-muted-800 dark:text-muted-200"
@@ -96,7 +96,7 @@
             duration-300
           "
         >
-          <i class="iconify w-5 h-5" data-icon="ph:arrow-left-duotone"></i>
+          <iconify-icon class="iconify w-5 h-5 flex items-center justify-center text-lg" icon="ph:arrow-left-duotone"></iconify-icon>
           <div class="font-sans">
             <h5
               class="text-sm font-semibold text-muted-800 dark:text-muted-200"
@@ -123,7 +123,7 @@
             duration-300
           "
         >
-          <i class="iconify w-5 h-5" data-icon="ph:credit-card-duotone"></i>
+          <iconify-icon class="iconify w-5 h-5 flex items-center justify-center text-lg" icon="ph:credit-card-duotone"></iconify-icon>
           <div class="font-sans">
             <h5
               class="text-sm font-semibold text-muted-800 dark:text-muted-200"
@@ -150,7 +150,7 @@
             duration-300
           "
         >
-          <i class="iconify w-5 h-5" data-icon="ph:wallet-duotone"></i>
+          <iconify-icon class="iconify w-5 h-5 flex items-center justify-center text-lg" icon="ph:wallet-duotone"></iconify-icon>
           <div class="font-sans">
             <h5
               class="text-sm font-semibold text-muted-800 dark:text-muted-200"

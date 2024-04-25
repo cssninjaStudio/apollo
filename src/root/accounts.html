@@ -15,27 +15,12 @@
     <!--Tabs-->
     <div class="flex items-center justify-between overflow-hidden">
       <div
-        class="
-          flex
-          gap-x-6
-          grow
-          font-sans
-          border-b border-muted-200
-          dark:border-muted-800
-          xs:overflow-x-auto
-        "
+        class="flex gap-x-6 grow font-sans border-b border-muted-200 dark:border-muted-800 xs:overflow-x-auto"
       >
         <a
           data-tab="tab-1"
           @click="toggle($event)"
-          class="
-            pb-2
-            select-none
-            border-b-2
-            cursor-pointer
-            transition-colors
-            duration-300
-          "
+          class="pb-2 select-none border-b-2 cursor-pointer transition-colors duration-300"
           :class="
             activeTab === 'tab-1'
               ? 'text-muted-700 dark:text-muted-100 border-primary-500'
@@ -47,14 +32,7 @@
         <a
           data-tab="tab-2"
           @click="toggle($event)"
-          class="
-            pb-2
-            select-none
-            border-b-2
-            cursor-pointer
-            transition-colors
-            duration-300
-          "
+          class="pb-2 select-none border-b-2 cursor-pointer transition-colors duration-300"
           :class="
             activeTab === 'tab-2'
               ? 'text-muted-700 dark:text-muted-100 border-primary-500'
@@ -66,14 +44,7 @@
         <a
           data-tab="tab-3"
           @click="toggle($event)"
-          class="
-            pb-2
-            select-none
-            border-b-2
-            cursor-pointer
-            transition-colors
-            duration-300
-          "
+          class="pb-2 select-none border-b-2 cursor-pointer transition-colors duration-300"
           :class="
             activeTab === 'tab-3'
               ? 'text-muted-700 dark:text-muted-100 border-primary-500'
@@ -93,12 +64,7 @@
         <div class="py-6">
           <p class="font-heading text-xs text-muted-400 mb-1">Global balance</p>
           <h3
-            class="
-              font-heading font-medium
-              mb-1
-              text-3xl text-muted-800
-              dark:text-muted-100
-            "
+            class="font-heading font-medium mb-1 text-3xl text-muted-800 dark:text-muted-100"
           >
             $15,389.22
           </h3>

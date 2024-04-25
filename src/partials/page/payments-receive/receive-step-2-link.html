@@ -60,7 +60,7 @@
           cursor-pointer
         "
       >
-        <i class="iconify w-8 h-8" data-icon="lucide:dollar-sign"></i>
+        <iconify-icon class="iconify w-8 h-8 flex items-center justify-center text-2xl" icon="lucide:dollar-sign"></iconify-icon>
       </div>
     </div>
 
@@ -120,7 +120,7 @@
               cursor-pointer
             "
           >
-            <i class="iconify w-5 h-5" data-icon="lucide:mail"></i>
+            <iconify-icon class="iconify w-5 h-5" icon="lucide:mail"></iconify-icon>
           </div>
         </div>
       </div>
@@ -181,19 +181,20 @@
                 $9,384.21
               </span>
             </div>
-            <i
+            <iconify-icon
               class="
                 iconify
                 w-4
                 h-4
+                flex items-center justify-center text-lg
                 ml-auto
                 text-muted-400
                 transition-transform
                 duration-300
               "
               :class="isOpen && 'rotate-180'"
-              data-icon="lucide:chevron-down"
-            ></i>
+              icon="lucide:chevron-down"
+            ></iconify-icon>
           </span>
         </button>
 

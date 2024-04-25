@@ -21,7 +21,7 @@
           cursor-pointer
         "
       >
-        <i class="iconify w-4 h-4" data-icon="lucide:download"></i>
+        <iconify-icon class="iconify w-4 h-4" icon="lucide:download"></iconify-icon>
         <span>Download as PDF</span>
       </a>
     </div>
@@ -104,8 +104,9 @@
           >
             Regular transfer
           </span>
-          <i
+          <iconify-icon
             class="
+              flex items-center justify-center text-lg
               iconify
               w-5
               h-5
@@ -113,9 +114,9 @@
               transition-transform
               duration-300
             "
-            :class="expanded ? 'rotate-180' : ''"
-            data-icon="lucide:chevron-down"
-          ></i>
+            :class="isOpen && 'rotate-180'"
+            icon="lucide:chevron-down"
+          ></iconify-icon>
         </button>
         <!--Content-->
         <div x-show="expanded" x-collapse class="w-full p-4">
@@ -261,8 +262,9 @@
           >
             International transfer
           </span>
-          <i
+          <iconify-icon
             class="
+              flex items-center justify-center text-lg
               iconify
               w-5
               h-5
@@ -270,9 +272,9 @@
               transition-transform
               duration-300
             "
-            :class="expanded ? 'rotate-180' : ''"
-            data-icon="lucide:chevron-down"
-          ></i>
+            :class="isOpen && 'rotate-180'"
+            icon="lucide:chevron-down"
+          ></iconify-icon>
         </button>
         <!--Content-->
         <div x-show="expanded" x-collapse class="w-full p-4">
@@ -432,7 +434,7 @@
           bg-primary-500
         "
       >
-        <i class="iconify w-4 h-4" data-icon="lucide:mail"></i>
+        <iconify-icon class="iconify w-4 h-4" icon="lucide:mail"></iconify-icon>
         <span>Share</span>
       </button>
     </div>

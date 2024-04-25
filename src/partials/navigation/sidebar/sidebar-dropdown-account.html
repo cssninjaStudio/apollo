@@ -18,22 +18,14 @@
         Mara C.
       </h5>
     </span>
-    <i
-      class="
-        iconify
-        w-5
-        h-5
-        ml-auto
-        text-muted-400
-        transition-transform
-        duration-300
-      "
+    <iconify-icon
+      class="iconify w-5 h-5 flex items-center justify-center text-lg ml-auto text-muted-400 transition-transform duration-300"
       :class="[
         $store.app.isLayoutCompact ? 'hidden' : 'block',
         isOpen ? 'rotate-180' : ''
       ]"
-      data-icon="lucide:chevron-up"
-    ></i>
+      icon="lucide:chevron-up"
+    ></iconify-icon>
   </button>
 
   <!--Dropdown menu-->
@@ -41,35 +33,11 @@
     x-cloak
     x-show="isOpen"
     x-transition
-    class="
-      absolute
-      -top-80
-      -left-2
-      w-[240px]
-      overflow-y-auto
-      slimscroll
-      p-2
-      rounded-lg
-      bg-white
-      dark:bg-muted-900
-      border border-muted-200
-      dark:border-muted-800
-      shadow-2xl shadow-muted-400/20
-      dark:shadow-muted-800/10
-      z-20
-    "
+    class="absolute -top-80 -left-2 w-[240px] overflow-y-auto slimscroll p-2 rounded-lg bg-white dark:bg-muted-900 border border-muted-200 dark:border-muted-800 shadow-2xl shadow-muted-400/20 dark:shadow-muted-800/10 z-20"
   >
     <!--Header-->
     <div
-      class="
-        flex
-        items-center
-        gap-x-2
-        py-4
-        px-6
-        border-b border-muted-200
-        dark:border-muted-700
-      "
+      class="flex items-center gap-x-2 py-4 px-6 border-b border-muted-200 dark:border-muted-700"
     >
       <div class="relative flex items-center justify-center h-12 w-12">
         <img
@@ -81,14 +49,7 @@
         />
       </div>
       <h3
-        class="
-          font-sans
-          text-sm
-          font-medium
-          uppercase
-          text-muted-500
-          dark:text-muted-200
-        "
+        class="font-sans text-sm font-medium uppercase text-muted-500 dark:text-muted-200"
       >
         Hi, Mara
       </h3>
@@ -97,20 +58,12 @@
       <li>
         <a
           href="/documents.html"
-          class="
-            flex
-            items-center
-            gap-3
-            p-2
-            rounded-lg
-            text-muted-400
-            hover:text-primary-500 hover:bg-muted-100
-            dark:hover:bg-muted-800
-            transition-colors
-            duration-300
-          "
+          class="flex items-center gap-3 p-2 rounded-lg text-muted-400 hover:text-primary-500 hover:bg-muted-100 dark:hover:bg-muted-800 transition-colors duration-300"
         >
-          <i class="iconify w-5 h-5" data-icon="ph:folder-duotone"></i>
+          <iconify-icon
+            class="iconify w-5 h-5 flex items-center justify-center text-lg"
+            icon="ph:folder-duotone"
+          ></iconify-icon>
           <div class="font-sans">
             <h5
               class="text-xs font-semibold text-muted-800 dark:text-muted-200"
@@ -124,20 +77,12 @@
       <li>
         <a
           href="/offers.html"
-          class="
-            flex
-            items-center
-            gap-3
-            p-2
-            rounded-lg
-            text-muted-400
-            hover:text-primary-500 hover:bg-muted-100
-            dark:hover:bg-muted-800
-            transition-colors
-            duration-300
-          "
+          class="flex items-center gap-3 p-2 rounded-lg text-muted-400 hover:text-primary-500 hover:bg-muted-100 dark:hover:bg-muted-800 transition-colors duration-300"
         >
-          <i class="iconify w-5 h-5" data-icon="ph:gift-duotone"></i>
+          <iconify-icon
+            class="iconify w-5 h-5 flex items-center justify-center text-lg"
+            icon="ph:gift-duotone"
+          ></iconify-icon>
           <div class="font-sans">
             <h5
               class="text-xs font-semibold text-muted-800 dark:text-muted-200"
@@ -151,20 +96,12 @@
       <li>
         <a
           href="/settings.html"
-          class="
-            flex
-            items-center
-            gap-3
-            p-2
-            rounded-lg
-            text-muted-400
-            hover:text-primary-500 hover:bg-muted-100
-            dark:hover:bg-muted-800
-            transition-colors
-            duration-300
-          "
+          class="flex items-center gap-3 p-2 rounded-lg text-muted-400 hover:text-primary-500 hover:bg-muted-100 dark:hover:bg-muted-800 transition-colors duration-300"
         >
-          <i class="iconify w-5 h-5" data-icon="ph:gear-six-duotone"></i>
+          <iconify-icon
+            class="iconify w-5 h-5 flex items-center justify-center text-lg"
+            icon="ph:gear-six-duotone"
+          ></iconify-icon>
           <div class="font-sans">
             <h5
               class="text-xs font-semibold text-muted-800 dark:text-muted-200"
@@ -178,20 +115,12 @@
       <li>
         <a
           href="/login.html"
-          class="
-            flex
-            items-center
-            gap-3
-            p-2
-            rounded-lg
-            text-muted-400
-            hover:text-primary-500 hover:bg-muted-100
-            dark:hover:bg-muted-800
-            transition-colors
-            duration-300
-          "
+          class="flex items-center gap-3 p-2 rounded-lg text-muted-400 hover:text-primary-500 hover:bg-muted-100 dark:hover:bg-muted-800 transition-colors duration-300"
         >
-          <i class="iconify w-5 h-5" data-icon="ph:sign-out-duotone"></i>
+          <iconify-icon
+            class="iconify w-5 h-5 flex items-center justify-center text-lg"
+            icon="ph:sign-out-duotone"
+          ></iconify-icon>
           <div class="font-sans">
             <h5
               class="text-xs font-semibold text-muted-800 dark:text-muted-200"

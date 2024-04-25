@@ -1,14 +1,7 @@
 <div class="w-full max-w-md">
   <div class="pb border-b border-muted-200 dark:border-muted-800">
     <h2
-      class="
-        font-heading
-        text-2xl
-        md:text-3xl
-        text-muted-800
-        dark:text-white
-        mb-8
-      "
+      class="font-heading text-2xl md:text-3xl text-muted-800 dark:text-white mb-8"
     >
       New Credit Card
     </h2>
@@ -28,16 +21,7 @@
       >
         <button
           type="button"
-          class="
-            w-full
-            p-4
-            click-blur
-            bg-white
-            dark:bg-muted-1000
-            rounded-xl
-            border border-muted-200
-            dark:border-muted-800
-          "
+          class="w-full p-4 click-blur bg-white dark:bg-muted-1000 rounded-xl border border-muted-200 dark:border-muted-800"
           @click="open()"
         >
           <span class="w-full flex items-center gap-3 text-left">
@@ -50,59 +34,28 @@
             />
             <div>
               <span
-                class="
-                  block
-                  font-heading
-                  text-sm text-muted-800
-                  dark:text-muted-200
-                "
+                class="block font-heading text-sm text-muted-800 dark:text-muted-200"
                 x-text="cardAccountType + ' xxx' + cardAccountNumber"
               >
                 Select account
               </span>
               <span
-                class="
-                  block
-                  font-heading
-                  text-xs text-muted-500
-                  dark:text-muted-400
-                "
+                class="block font-heading text-xs text-muted-500 dark:text-muted-400"
                 x-text="cardAccountBalance"
               ></span>
             </div>
-            <i
-              class="
-                iconify
-                w-4
-                h-4
-                ml-auto
-                text-muted-400
-                transition-transform
-                duration-300
-              "
+            <iconify-icon
+              class="iconify w-4 h-4 flex items-center justify-center text-lg ml-auto text-muted-400 transition-transform duration-300"
               :class="isOpen && 'rotate-180'"
-              data-icon="lucide:chevron-down"
-            ></i>
+              icon="lucide:chevron-down"
+            ></iconify-icon>
           </span>
         </button>
 
         <div
           x-show="isOpen"
           x-transition
-          class="
-            absolute
-            top-20
-            left-0
-            w-full
-            p-2
-            rounded-xl
-            border border-muted-200
-            dark:border-muted-800
-            bg-white
-            dark:bg-muted-1000
-            shadow-xl shadow-muted-400/10
-            dark:shadow-muted-800/10
-          "
+          class="absolute top-20 left-0 w-full p-2 rounded-xl border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-1000 shadow-xl shadow-muted-400/10 dark:shadow-muted-800/10"
         >
           <!--Accounts-->
           <ul>
@@ -110,21 +63,7 @@
             <li>
               <button
                 type="button"
-                class="
-                  w-full
-                  flex
-                  items-center
-                  gap-3
-                  text-left
-                  py-2
-                  px-4
-                  rounded-xl
-                  hover:bg-muted-100
-                  dark:hover:bg-muted-900
-                  transition-colors
-                  duration-300
-                  click-blur
-                "
+                class="w-full flex items-center gap-3 text-left py-2 px-4 rounded-xl hover:bg-muted-100 dark:hover:bg-muted-900 transition-colors duration-300 click-blur"
                 @click="getAccountInfo($event), close()"
                 data-number="4869"
                 data-balance="9,384.21"
@@ -139,22 +78,12 @@
                 />
                 <span class="block">
                   <span
-                    class="
-                      block
-                      font-heading
-                      text-sm text-muted-800
-                      dark:text-muted-200
-                    "
+                    class="block font-heading text-sm text-muted-800 dark:text-muted-200"
                   >
                     checking xxx4869
                   </span>
                   <span
-                    class="
-                      block
-                      font-heading
-                      text-xs text-muted-500
-                      dark:text-muted-400
-                    "
+                    class="block font-heading text-xs text-muted-500 dark:text-muted-400"
                   >
                     $9,384.21
                   </span>
@@ -165,21 +94,7 @@
             <li>
               <button
                 type="button"
-                class="
-                  w-full
-                  flex
-                  items-center
-                  gap-3
-                  text-left
-                  py-2
-                  px-4
-                  rounded-xl
-                  hover:bg-muted-100
-                  dark:hover:bg-muted-900
-                  transition-colors
-                  duration-300
-                  click-blur
-                "
+                class="w-full flex items-center gap-3 text-left py-2 px-4 rounded-xl hover:bg-muted-100 dark:hover:bg-muted-900 transition-colors duration-300 click-blur"
                 @click="getAccountInfo($event), close()"
                 data-number="4847"
                 data-balance="3,511.92"
@@ -194,22 +109,12 @@
                 />
                 <span class="block">
                   <span
-                    class="
-                      block
-                      font-heading
-                      text-sm text-muted-800
-                      dark:text-muted-200
-                    "
+                    class="block font-heading text-sm text-muted-800 dark:text-muted-200"
                   >
                     checking xxx4847
                   </span>
                   <span
-                    class="
-                      block
-                      font-heading
-                      text-xs text-muted-500
-                      dark:text-muted-400
-                    "
+                    class="block font-heading text-xs text-muted-500 dark:text-muted-400"
                   >
                     $3,511.92
                   </span>
@@ -220,21 +125,7 @@
             <li>
               <button
                 type="button"
-                class="
-                  w-full
-                  flex
-                  items-center
-                  gap-3
-                  text-left
-                  py-2
-                  px-4
-                  rounded-xl
-                  hover:bg-muted-100
-                  dark:hover:bg-muted-900
-                  transition-colors
-                  duration-300
-                  click-blur
-                "
+                class="w-full flex items-center gap-3 text-left py-2 px-4 rounded-xl hover:bg-muted-100 dark:hover:bg-muted-900 transition-colors duration-300 click-blur"
                 @click="getAccountInfo($event), close()"
                 data-number="7862"
                 data-balance="7,213.11"
@@ -249,22 +140,12 @@
                 />
                 <span class="block">
                   <span
-                    class="
-                      block
-                      font-heading
-                      text-sm text-muted-800
-                      dark:text-muted-200
-                    "
+                    class="block font-heading text-sm text-muted-800 dark:text-muted-200"
                   >
                     savings xxx7862
                   </span>
                   <span
-                    class="
-                      block
-                      font-heading
-                      text-xs text-muted-500
-                      dark:text-muted-400
-                    "
+                    class="block font-heading text-xs text-muted-500 dark:text-muted-400"
                   >
                     $7,213.11
                   </span>
@@ -284,30 +165,7 @@
       <div class="relative group">
         <select
           x-model="cardholder"
-          class="
-            appearance-none
-            px-3
-            py-2
-            h-11
-            text-sm
-            leading-5
-            font-sans
-            w-full
-            rounded-lg
-            border border-muted-300
-            bg-white
-            text-muted-600
-            placeholder-gray-300
-            focus:border-muted-300 focus:shadow-lg
-            dark:placeholder-gray-600
-            dark:bg-muted-1000
-            dark:text-muted-200
-            dark:border-muted-800
-            dark:focus:border-muted-800
-            tw-accessibility
-            transition-all
-            duration-300
-          "
+          class="appearance-none px-3 py-2 h-11 text-sm leading-5 font-sans w-full rounded-lg border border-muted-300 bg-white text-muted-600 placeholder-gray-300 focus:border-muted-300 focus:shadow-lg dark:placeholder-gray-600 dark:bg-muted-1000 dark:text-muted-200 dark:border-muted-800 dark:focus:border-muted-800 tw-accessibility transition-all duration-300"
         >
           <option>Select Someone</option>
           <option value="Mara Callaway">Mara Callaway</option>
@@ -315,22 +173,12 @@
           <option value="Linda Callaway">Linda Callaway</option>
         </select>
         <div
-          class="
-            absolute
-            top-0
-            right-0
-            h-11
-            w-11
-            flex
-            justify-center
-            items-center
-            text-muted-400
-            transition-transform
-            duration-300
-            group-focus-within:-rotate-180
-          "
+          class="absolute top-0 right-0 h-11 w-11 flex justify-center items-center text-muted-400 transition-transform duration-300 group-focus-within:-rotate-180"
         >
-          <i class="iconify w-4 h-4" data-icon="lucide:chevron-down"></i>
+          <iconify-icon
+            class="iconify w-4 h-4"
+            icon="lucide:chevron-down"
+          ></iconify-icon>
         </div>
       </div>
     </div>
@@ -343,52 +191,19 @@
       <div class="relative group">
         <select
           x-model="cardType"
-          class="
-            appearance-none
-            px-3
-            py-2
-            h-11
-            text-sm
-            leading-5
-            font-sans
-            w-full
-            rounded-lg
-            border border-muted-300
-            bg-white
-            text-muted-600
-            placeholder-gray-300
-            focus:border-muted-300 focus:shadow-lg
-            dark:placeholder-gray-600
-            dark:bg-muted-1000
-            dark:text-muted-200
-            dark:border-muted-800
-            dark:focus:border-muted-800
-            tw-accessibility
-            transition-all
-            duration-300
-          "
+          class="appearance-none px-3 py-2 h-11 text-sm leading-5 font-sans w-full rounded-lg border border-muted-300 bg-white text-muted-600 placeholder-gray-300 focus:border-muted-300 focus:shadow-lg dark:placeholder-gray-600 dark:bg-muted-1000 dark:text-muted-200 dark:border-muted-800 dark:focus:border-muted-800 tw-accessibility transition-all duration-300"
         >
           <option>Select a type</option>
           <option value="Physical">Physical</option>
           <option value="Virtual">Virtual</option>
         </select>
         <div
-          class="
-            absolute
-            top-0
-            right-0
-            h-11
-            w-11
-            flex
-            justify-center
-            items-center
-            text-muted-400
-            transition-transform
-            duration-300
-            group-focus-within:-rotate-180
-          "
+          class="absolute top-0 right-0 h-11 w-11 flex justify-center items-center text-muted-400 transition-transform duration-300 group-focus-within:-rotate-180"
         >
-          <i class="iconify w-4 h-4" data-icon="lucide:chevron-down"></i>
+          <iconify-icon
+            class="iconify w-4 h-4"
+            icon="lucide:chevron-down"
+          ></iconify-icon>
         </div>
       </div>
     </div>
@@ -401,52 +216,19 @@
       <div class="relative group">
         <select
           x-model="cardLimit"
-          class="
-            appearance-none
-            px-3
-            py-2
-            h-11
-            text-sm
-            leading-5
-            font-sans
-            w-full
-            rounded-lg
-            border border-muted-300
-            bg-white
-            text-muted-600
-            placeholder-gray-300
-            focus:border-muted-300 focus:shadow-lg
-            dark:placeholder-gray-600
-            dark:bg-muted-1000
-            dark:text-muted-200
-            dark:border-muted-800
-            dark:focus:border-muted-800
-            tw-accessibility
-            transition-all
-            duration-300
-          "
+          class="appearance-none px-3 py-2 h-11 text-sm leading-5 font-sans w-full rounded-lg border border-muted-300 bg-white text-muted-600 placeholder-gray-300 focus:border-muted-300 focus:shadow-lg dark:placeholder-gray-600 dark:bg-muted-1000 dark:text-muted-200 dark:border-muted-800 dark:focus:border-muted-800 tw-accessibility transition-all duration-300"
         >
           <option>Select a type</option>
           <option value="Daily" selected>Daily</option>
           <option value="Monthly">Monthly</option>
         </select>
         <div
-          class="
-            absolute
-            top-0
-            right-0
-            h-11
-            w-11
-            flex
-            justify-center
-            items-center
-            text-muted-400
-            transition-transform
-            duration-300
-            group-focus-within:-rotate-180
-          "
+          class="absolute top-0 right-0 h-11 w-11 flex justify-center items-center text-muted-400 transition-transform duration-300 group-focus-within:-rotate-180"
         >
-          <i class="iconify w-4 h-4" data-icon="lucide:chevron-down"></i>
+          <iconify-icon
+            class="iconify w-4 h-4"
+            icon="lucide:chevron-down"
+          ></iconify-icon>
         </div>
       </div>
     </div>
@@ -460,88 +242,29 @@
         <input
           type="number"
           x-model="cardSpendingLimit"
-          class="
-            p-4
-            pl-11
-            py-2
-            h-11
-            text-sm
-            leading-5
-            font-sans
-            w-full
-            rounded-lg
-            text-muted-600
-            border border-muted-300
-            focus:border-muted-300
-            placeholder:text-muted-300
-            dark:placeholder:text-muted-700
-            bg-white
-            dark:bg-muted-1000
-            dark:text-muted-200
-            dark:border-muted-800
-            dark:focus:border-muted-800
-            outline-none
-            transition-all
-            duration-300
-          "
+          class="p-4 pl-11 py-2 h-11 text-sm leading-5 font-sans w-full rounded-lg text-muted-600 border border-muted-300 focus:border-muted-300 placeholder:text-muted-300 dark:placeholder:text-muted-700 bg-white dark:bg-muted-1000 dark:text-muted-200 dark:border-muted-800 dark:focus:border-muted-800 outline-none transition-all duration-300"
           placeholder="0.00"
         />
         <div
-          class="
-            absolute
-            top-0
-            left-0
-            h-11
-            w-11
-            flex
-            justify-center
-            items-center
-            text-muted-400
-            dark:text-muted-600
-            group-focus-within:text-primary-500
-            transition-colors
-            duration-300
-            cursor-pointer
-          "
+          class="absolute top-0 left-0 h-11 w-11 flex justify-center items-center text-muted-400 dark:text-muted-600 group-focus-within:text-primary-500 transition-colors duration-300 cursor-pointer"
         >
-          <i class="iconify w-4 h-4" data-icon="lucide:dollar-sign"></i>
+          <iconify-icon
+            class="iconify w-4 h-4"
+            icon="lucide:dollar-sign"
+          ></iconify-icon>
         </div>
       </div>
     </div>
     <!--Buttons-->
     <div class="flex gap-4 py-8">
       <p
-        class="
-          w-full
-          h-12
-          inline-flex
-          justify-center
-          items-center
-          rounded-md
-          px-4
-          py-2
-          font-heading
-          text-sm text-muted-600
-          dark:text-muted-400
-        "
+        class="w-full h-12 inline-flex justify-center items-center rounded-md px-4 py-2 font-heading text-sm text-muted-600 dark:text-muted-400"
       >
         The card will be activated within 1-2 business days.
       </p>
       <button
         type="button"
-        class="
-          w-full
-          h-12
-          inline-flex
-          justify-center
-          items-center
-          rounded-md
-          px-4
-          py-2
-          font-heading
-          text-white text-sm
-          bg-primary-500
-        "
+        class="w-full h-12 inline-flex justify-center items-center rounded-md px-4 py-2 font-heading text-white text-sm bg-primary-500"
         :class="[
           isLoading ? 'button-loading' : '',
           cardType === 'New' ? 'cursor-not-allowed opacity-70' : ''

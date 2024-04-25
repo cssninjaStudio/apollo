@@ -41,14 +41,14 @@
             <div class="relative overflow-hidden">
               <div class="relative">
                 <img
-                  class="block dark:hidden rounded-xl"
+                  class="w-full block dark:hidden rounded-xl"
                   x-bind:src="screenshot.screenshotLight"
                   alt="screenshot light image"
                   width="350"
                   height="198"
                 />
                 <img
-                  class="hidden dark:block rounded-xl"
+                  class="w-full hidden dark:block rounded-xl"
                   x-bind:src="screenshot.screenshotDark"
                   alt="screenshot dark image"
                   width="350"
@@ -104,17 +104,14 @@
                       "
                     >
                       <span>Go to demo</span>
-                      <i
-                        class="
+                      <iconify-icon class="
                           iconify
                           w-4
                           h-4
                           group-hover:text-primary-500 group-hover:translate-x-1
                           transition-all
                           duration-300
-                        "
-                        data-icon="ph:arrow-right-bold"
-                      ></i>
+                        " icon="ph:arrow-right-bold"></iconify-icon>
                     </span>
                   </div>
                 </div>
