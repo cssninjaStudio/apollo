@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/cssninjaStudio/apollo/compare/v1.2.1...v1.3.0) (2026-09-30)
+
+
+### ⚖️ License
+
+* relicense under MIT ([83732a6](https://github.com/cssninjaStudio/apollo/commit/83732a67a15bd6cde96fed8c976e823bd90fc937))
+
 ### [1.2.1](https://github.com/cssninjaStudio/apollo/compare/v1.2.0...v1.2.1) (2024-04-29)
 
 ## [1.2.0](https://github.com/cssninjaStudio/apollo/compare/v1.1.1...v1.2.0) (2024-04-25)
